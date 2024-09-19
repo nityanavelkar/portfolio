@@ -1,357 +1,248 @@
-[2024-09-19 06:20:49] [class-ss-archive-creation-job.php:83] Starting a job; no job is presently running
-[2024-09-19 06:20:49] [class-ss-archive-creation-job.php:84] Here's our task list: setup, fetch_urls, generate_404, transfer_files_locally, wrapup
-[2024-09-19 06:20:49] [class-ss-archive-creation-job.php:102] Pushing first task to queue: setup
-[2024-09-19 06:20:50] [class-ss-archive-creation-job.php:136] Current task: setup
-[2024-09-19 06:20:50] [class-ss-archive-creation-job.php:153] Performing task: setup
-[2024-09-19 06:20:50] [class-ss-task.php:44] Status message: [setup] Setting up
-[2024-09-19 06:20:50] [class-ss-setup-task.php:33] Creating archive directory: C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849\
-[2024-09-19 06:20:50] [class-ss-setup-task.php:72] Adding origin URL to queue: http://localhost/portfolio/
-[2024-09-19 06:20:50] [class-ss-archive-creation-job.php:175] We've found our next task: fetch_urls
-[2024-09-19 06:20:50] [class-ss-archive-creation-job.php:136] Current task: fetch_urls
-[2024-09-19 06:20:50] [class-ss-archive-creation-job.php:153] Performing task: fetch_urls
-[2024-09-19 06:20:50] [class-ss-fetch-urls-task.php:69] Total pages: 1; Pages remaining: 1
-[2024-09-19 06:20:50] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/
-[2024-09-19 06:20:50] [class-ss-task.php:58] [PAGES STATUS] Remaining:1; Total: 1
-[2024-09-19 06:20:50] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:50] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c281fda-UJ6ZDu.tmp
-[2024-09-19 06:20:50] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/?simply_static_page=1
-[2024-09-19 06:20:50] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/?simply_static_page=1
-[2024-09-19 06:20:51] [class-ss-url-fetcher.php:103] Filesize: 56050 bytes
-[2024-09-19 06:20:51] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html; charset=UTF-8
-[2024-09-19 06:20:51] [class-ss-url-fetcher.php:233] New filename for static page: /index.html
-[2024-09-19 06:20:51] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c281fda-UJ6ZDu.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/index.html
-[2024-09-19 06:20:51] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:51] [class-ss-fetch-urls-task.php:159] Adding 11 URLs to the queue
-[2024-09-19 06:20:51] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:51] [class-ss-page.php:119] Checking Content Identical:19b7b0da800f75d2ae45de927acfaf4be1d00077===. Value: FALSE
-[2024-09-19 06:20:51] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 0 of 1 pages/files
-[2024-09-19 06:20:51] [class-ss-archive-creation-job.php:181] We're not done with the fetch_urls task yet
-[2024-09-19 06:20:51] [class-ss-archive-creation-job.php:136] Current task: fetch_urls
-[2024-09-19 06:20:51] [class-ss-archive-creation-job.php:153] Performing task: fetch_urls
-[2024-09-19 06:20:51] [class-ss-fetch-urls-task.php:69] Total pages: 12; Pages remaining: 11
-[2024-09-19 06:20:51] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-content/uploads/2024/09/DSC03458-3.jpg
-[2024-09-19 06:20:51] [class-ss-task.php:58] [PAGES STATUS] Remaining:11; Total: 12
-[2024-09-19 06:20:51] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:51] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c3891dc-1F6Ivr.tmp
-[2024-09-19 06:20:51] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-content/uploads/2024/09/DSC03458-3.jpg?simply_static_page=2
-[2024-09-19 06:20:51] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-content/uploads/2024/09/DSC03458-3.jpg?simply_static_page=2
-[2024-09-19 06:20:51] [class-ss-url-fetcher.php:103] Filesize: 3021271 bytes
-[2024-09-19 06:20:51] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: image/jpeg
-[2024-09-19 06:20:51] [class-ss-url-fetcher.php:233] New filename for static page: /wp-content/uploads/2024/09/DSC03458-3.jpg
-[2024-09-19 06:20:51] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c3891dc-1F6Ivr.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/wp-content/uploads/2024/09/DSC03458-3.jpg
-[2024-09-19 06:20:51] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:51] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
-[2024-09-19 06:20:51] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:51] [class-ss-page.php:119] Checking Content Identical:311f6015079bb80a57f501e96f9d600661cf253c===. Value: FALSE
-[2024-09-19 06:20:51] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/feed/
-[2024-09-19 06:20:51] [class-ss-task.php:58] [PAGES STATUS] Remaining:10; Total: 12
-[2024-09-19 06:20:51] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:51] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c39f9f1-1mlImL.tmp
-[2024-09-19 06:20:51] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/feed/?simply_static_page=3
-[2024-09-19 06:20:51] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/feed/?simply_static_page=3
-[2024-09-19 06:20:52] [class-ss-url-fetcher.php:103] Filesize: 1692 bytes
-[2024-09-19 06:20:52] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: application/rss+xml; charset=UTF-8
-[2024-09-19 06:20:52] [class-ss-url-fetcher.php:233] New filename for static page: /feed/index.xml
-[2024-09-19 06:20:52] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c39f9f1-1mlImL.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/feed/index.xml
-[2024-09-19 06:20:52] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:52] [class-ss-fetch-urls-task.php:159] Adding 5 URLs to the queue
-[2024-09-19 06:20:52] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:52] [class-ss-page.php:119] Checking Content Identical:9e9af609b8497c2a9a71b268993b9706f3faa5d7===. Value: FALSE
-[2024-09-19 06:20:52] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/comments/feed/
-[2024-09-19 06:20:52] [class-ss-task.php:58] [PAGES STATUS] Remaining:9; Total: 12
-[2024-09-19 06:20:52] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:52] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c46f2c9-0hSVrL.tmp
-[2024-09-19 06:20:52] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/comments/feed/?simply_static_page=4
-[2024-09-19 06:20:52] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/comments/feed/?simply_static_page=4
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:103] Filesize: 1659 bytes
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: application/rss+xml; charset=UTF-8
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:233] New filename for static page: /comments/feed/index.xml
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c46f2c9-0hSVrL.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/comments/feed/index.xml
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:159] Adding 4 URLs to the queue
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:53] [class-ss-page.php:119] Checking Content Identical:799da9719044808441d0838e54f9af10a971a4c8===. Value: FALSE
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-includes/blocks/cover/style.min.css
-[2024-09-19 06:20:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:8; Total: 12
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c51d7e9-ClrylO.tmp
-[2024-09-19 06:20:53] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-includes/blocks/cover/style.min.css?simply_static_page=5
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-includes/blocks/cover/style.min.css?simply_static_page=5
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:103] Filesize: 17950 bytes
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/css
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:233] New filename for static page: /wp-includes/blocks/cover/style.min.css
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c51d7e9-ClrylO.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/wp-includes/blocks/cover/style.min.css
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:53] [class-ss-page.php:119] Checking Content Identical:62c549867e546e9b70dbba51b299d0a884dd5df3===. Value: FALSE
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-includes/blocks/navigation/style.min.css
-[2024-09-19 06:20:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:7; Total: 12
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c526b49-v7ieSp.tmp
-[2024-09-19 06:20:53] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-includes/blocks/navigation/style.min.css?simply_static_page=6
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-includes/blocks/navigation/style.min.css?simply_static_page=6
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:103] Filesize: 16384 bytes
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/css
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:233] New filename for static page: /wp-includes/blocks/navigation/style.min.css
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c526b49-v7ieSp.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/wp-includes/blocks/navigation/style.min.css
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:53] [class-ss-page.php:119] Checking Content Identical:da66b61dcc5204277eb7846b9dce55b2e7d58a42===. Value: FALSE
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-json/
-[2024-09-19 06:20:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:6; Total: 12
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:79] Excludable found: URL: http://localhost/portfolio/wp-json/
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:89] Skipping URL because it is no-save and no-follow
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/xmlrpc.php
-[2024-09-19 06:20:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:5; Total: 12
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:79] Excludable found: URL: http://localhost/portfolio/xmlrpc.php
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:89] Skipping URL because it is no-save and no-follow
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2
-[2024-09-19 06:20:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:4; Total: 12
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c533f7f-LKmw65.tmp
-[2024-09-19 06:20:53] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2?simply_static_page=9
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2?simply_static_page=9
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:103] Filesize: 326628 bytes
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: font/woff2
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:233] New filename for static page: /wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c533f7f-LKmw65.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:53] [class-ss-page.php:119] Checking Content Identical:40546dbfd5c467c3257d8f3a4ad8af0d9995aeb6===. Value: FALSE
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2
-[2024-09-19 06:20:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:3; Total: 12
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c53e833-6OEK5J.tmp
-[2024-09-19 06:20:53] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2?simply_static_page=10
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2?simply_static_page=10
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:103] Filesize: 146060 bytes
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: font/woff2
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:233] New filename for static page: /wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c53e833-6OEK5J.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:53] [class-ss-page.php:119] Checking Content Identical:b86a6f0bf3fb4777160165dfe37ca4e99b90216e===. Value: FALSE
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2
-[2024-09-19 06:20:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:2; Total: 12
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c54789b-AhITF9.tmp
-[2024-09-19 06:20:53] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2?simply_static_page=11
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2?simply_static_page=11
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:103] Filesize: 105184 bytes
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: font/woff2
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:233] New filename for static page: /wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c54789b-AhITF9.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:53] [class-ss-page.php:119] Checking Content Identical:0fdff68c4027cf421d605798a1de46a061d160a3===. Value: FALSE
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2
-[2024-09-19 06:20:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:1; Total: 12
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c55053b-J7OiLn.tmp
-[2024-09-19 06:20:53] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2?simply_static_page=12
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2?simply_static_page=12
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:103] Filesize: 132564 bytes
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: font/woff2
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:233] New filename for static page: /wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c55053b-J7OiLn.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:53] [class-ss-page.php:119] Checking Content Identical:dc56f8308f3385b427ce85c20b9afc471be17c60===. Value: FALSE
-[2024-09-19 06:20:53] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 1 of 12 pages/files
-[2024-09-19 06:20:53] [class-ss-archive-creation-job.php:181] We're not done with the fetch_urls task yet
-[2024-09-19 06:20:53] [class-ss-archive-creation-job.php:136] Current task: fetch_urls
-[2024-09-19 06:20:53] [class-ss-archive-creation-job.php:153] Performing task: fetch_urls
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:69] Total pages: 15; Pages remaining: 3
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio
-[2024-09-19 06:20:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:3; Total: 15
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c55b432-xJTKcp.tmp
-[2024-09-19 06:20:53] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio?simply_static_page=13
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio?simply_static_page=13
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:103] Filesize: 356 bytes
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:119] http_status_code: 301 | content_type: text/html; charset=iso-8859-1
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:204] redirect_url: http://localhost/portfolio/
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:213] This is a redirect to a trailing slashed version of the same page; adding new URL to the queue
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/2024/09/19/hello-world/
-[2024-09-19 06:20:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:2; Total: 15
-[2024-09-19 06:20:53] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c561287-nbPrQ1.tmp
-[2024-09-19 06:20:53] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/2024/09/19/hello-world/?simply_static_page=14
-[2024-09-19 06:20:53] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/2024/09/19/hello-world/?simply_static_page=14
-[2024-09-19 06:20:54] [class-ss-url-fetcher.php:103] Filesize: 72256 bytes
-[2024-09-19 06:20:54] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html; charset=UTF-8
-[2024-09-19 06:20:54] [class-ss-url-fetcher.php:233] New filename for static page: /2024/09/19/hello-world/index.html
-[2024-09-19 06:20:54] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c561287-nbPrQ1.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/2024/09/19/hello-world/index.html
-[2024-09-19 06:20:54] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:54] [class-ss-fetch-urls-task.php:159] Adding 18 URLs to the queue
-[2024-09-19 06:20:54] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:54] [class-ss-page.php:119] Checking Content Identical:39d22e2a7cae6f27d2d8b05c1ef4c6610a3f1794===. Value: FALSE
-[2024-09-19 06:20:54] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/2024/09/19/hello-world/feed/
-[2024-09-19 06:20:54] [class-ss-task.php:58] [PAGES STATUS] Remaining:1; Total: 15
-[2024-09-19 06:20:54] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:54] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c638d94-V3HXAe.tmp
-[2024-09-19 06:20:54] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/2024/09/19/hello-world/feed/?simply_static_page=15
-[2024-09-19 06:20:54] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/2024/09/19/hello-world/feed/?simply_static_page=15
-[2024-09-19 06:20:54] [class-ss-url-fetcher.php:103] Filesize: 1687 bytes
-[2024-09-19 06:20:54] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: application/rss+xml; charset=UTF-8
-[2024-09-19 06:20:54] [class-ss-url-fetcher.php:233] New filename for static page: /2024/09/19/hello-world/feed/index.xml
-[2024-09-19 06:20:54] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c638d94-V3HXAe.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/2024/09/19/hello-world/feed/index.xml
-[2024-09-19 06:20:54] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:54] [class-ss-fetch-urls-task.php:159] Adding 3 URLs to the queue
-[2024-09-19 06:20:54] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:54] [class-ss-page.php:119] Checking Content Identical:290255091d368836051fe04ecab89ba8297a5497===. Value: FALSE
-[2024-09-19 06:20:54] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 12 of 15 pages/files
-[2024-09-19 06:20:54] [class-ss-archive-creation-job.php:181] We're not done with the fetch_urls task yet
-[2024-09-19 06:20:54] [class-ss-archive-creation-job.php:136] Current task: fetch_urls
-[2024-09-19 06:20:54] [class-ss-archive-creation-job.php:153] Performing task: fetch_urls
-[2024-09-19 06:20:54] [class-ss-fetch-urls-task.php:69] Total pages: 21; Pages remaining: 6
-[2024-09-19 06:20:54] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/author/nityanavelkar/
-[2024-09-19 06:20:54] [class-ss-task.php:58] [PAGES STATUS] Remaining:6; Total: 21
-[2024-09-19 06:20:54] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:54] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c6ebcd4-ab3Mup.tmp
-[2024-09-19 06:20:54] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/author/nityanavelkar/?simply_static_page=16
-[2024-09-19 06:20:54] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/author/nityanavelkar/?simply_static_page=16
-[2024-09-19 06:20:55] [class-ss-url-fetcher.php:103] Filesize: 59582 bytes
-[2024-09-19 06:20:55] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html; charset=UTF-8
-[2024-09-19 06:20:55] [class-ss-url-fetcher.php:233] New filename for static page: /author/nityanavelkar/index.html
-[2024-09-19 06:20:55] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c6ebcd4-ab3Mup.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/author/nityanavelkar/index.html
-[2024-09-19 06:20:55] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:55] [class-ss-fetch-urls-task.php:159] Adding 14 URLs to the queue
-[2024-09-19 06:20:55] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:55] [class-ss-page.php:119] Checking Content Identical:5a6e138a29084f3808ce087e50b135615905fcb2===. Value: FALSE
-[2024-09-19 06:20:55] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/category/uncategorized/
-[2024-09-19 06:20:55] [class-ss-task.php:58] [PAGES STATUS] Remaining:5; Total: 21
-[2024-09-19 06:20:55] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:55] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c7c3434-mvNwva.tmp
-[2024-09-19 06:20:55] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/category/uncategorized/?simply_static_page=17
-[2024-09-19 06:20:55] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/category/uncategorized/?simply_static_page=17
-[2024-09-19 06:20:56] [class-ss-url-fetcher.php:103] Filesize: 52330 bytes
-[2024-09-19 06:20:56] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
-[2024-09-19 06:20:56] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
-[2024-09-19 06:20:56] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c877288-H7vF9T.tmp
-[2024-09-19 06:20:56] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/category/uncategorized/
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:103] Filesize: 52330 bytes
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-includes/js/comment-reply.min.js
-[2024-09-19 06:20:57] [class-ss-task.php:58] [PAGES STATUS] Remaining:4; Total: 21
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c91511f-4gssDd.tmp
-[2024-09-19 06:20:57] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-includes/js/comment-reply.min.js?simply_static_page=18
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-includes/js/comment-reply.min.js?simply_static_page=18
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:103] Filesize: 2981 bytes
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/javascript
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:233] New filename for static page: /wp-includes/js/comment-reply.min.js
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c91511f-4gssDd.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/wp-includes/js/comment-reply.min.js
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:57] [class-ss-page.php:119] Checking Content Identical:db36a77f6aaa2063bfbec02c2c0e967438c5a245===. Value: FALSE
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-includes/css/dist/block-library/common.min.css
-[2024-09-19 06:20:57] [class-ss-task.php:58] [PAGES STATUS] Remaining:3; Total: 21
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c91c82a-nE0wfS.tmp
-[2024-09-19 06:20:57] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-includes/css/dist/block-library/common.min.css?simply_static_page=19
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-includes/css/dist/block-library/common.min.css?simply_static_page=19
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:103] Filesize: 3472 bytes
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/css
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:233] New filename for static page: /wp-includes/css/dist/block-library/common.min.css
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c91c82a-nE0wfS.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/wp-includes/css/dist/block-library/common.min.css
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:57] [class-ss-page.php:119] Checking Content Identical:bbde28aa1f2f849a80a69d35191a0814c62648ca===. Value: FALSE
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-json/wp/v2/posts/1
-[2024-09-19 06:20:57] [class-ss-task.php:58] [PAGES STATUS] Remaining:2; Total: 21
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:79] Excludable found: URL: http://localhost/portfolio/wp-json/wp/v2/posts/1
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:89] Skipping URL because it is no-save and no-follow
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-json/oembed/1.0/embed
-[2024-09-19 06:20:57] [class-ss-task.php:58] [PAGES STATUS] Remaining:1; Total: 21
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:79] Excludable found: URL: http://localhost/portfolio/wp-json/oembed/1.0/embed
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:89] Skipping URL because it is no-save and no-follow
-[2024-09-19 06:20:57] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 15 of 21 pages/files
-[2024-09-19 06:20:57] [class-ss-archive-creation-job.php:181] We're not done with the fetch_urls task yet
-[2024-09-19 06:20:57] [class-ss-archive-creation-job.php:136] Current task: fetch_urls
-[2024-09-19 06:20:57] [class-ss-archive-creation-job.php:153] Performing task: fetch_urls
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:69] Total pages: 23; Pages remaining: 2
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/author/nityanavelkar/feed/
-[2024-09-19 06:20:57] [class-ss-task.php:58] [PAGES STATUS] Remaining:2; Total: 23
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:83] URL is not being excluded
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c92c2b1-vaWR8j.tmp
-[2024-09-19 06:20:57] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/author/nityanavelkar/feed/?simply_static_page=22
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/author/nityanavelkar/feed/?simply_static_page=22
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:103] Filesize: 1727 bytes
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: application/rss+xml; charset=UTF-8
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:233] New filename for static page: /author/nityanavelkar/feed/index.xml
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c92c2b1-vaWR8j.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849/author/nityanavelkar/feed/index.xml
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:159] Adding 5 URLs to the queue
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
-[2024-09-19 06:20:57] [class-ss-page.php:119] Checking Content Identical:ccbe892894cb3c930717683527a2f1ee8d051e37===. Value: FALSE
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-json/wp/v2/users/1
-[2024-09-19 06:20:57] [class-ss-task.php:58] [PAGES STATUS] Remaining:1; Total: 23
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:79] Excludable found: URL: http://localhost/portfolio/wp-json/wp/v2/users/1
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:89] Skipping URL because it is no-save and no-follow
-[2024-09-19 06:20:57] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 21 of 23 pages/files
-[2024-09-19 06:20:57] [class-ss-archive-creation-job.php:181] We're not done with the fetch_urls task yet
-[2024-09-19 06:20:57] [class-ss-archive-creation-job.php:136] Current task: fetch_urls
-[2024-09-19 06:20:57] [class-ss-archive-creation-job.php:153] Performing task: fetch_urls
-[2024-09-19 06:20:57] [class-ss-fetch-urls-task.php:69] Total pages: 23; Pages remaining: 0
-[2024-09-19 06:20:57] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 23 of 23 pages/files
-[2024-09-19 06:20:57] [class-ss-archive-creation-job.php:175] We've found our next task: generate_404
-[2024-09-19 06:20:57] [class-ss-archive-creation-job.php:136] Current task: generate_404
-[2024-09-19 06:20:57] [class-ss-archive-creation-job.php:153] Performing task: generate_404
-[2024-09-19 06:20:57] [class-ss-task.php:44] Status message: [generate_404] Generating 404 Page.
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebc2c9ccf43-BftKHm.tmp
-[2024-09-19 06:20:57] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/1726726858?simply_static_page=0
-[2024-09-19 06:20:57] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/1726726858?simply_static_page=0
-[2024-09-19 06:20:58] [class-ss-url-fetcher.php:103] Filesize: 52330 bytes
-[2024-09-19 06:20:58] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
-[2024-09-19 06:20:58] [class-ss-url-fetcher.php:233] New filename for static page: 404/index.html
-[2024-09-19 06:20:58] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebc2c9ccf43-BftKHm.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726726849\404/index.html
-[2024-09-19 06:20:58] [class-ss-generate-404-task.php:119] Replacing URLs in the static file
-[2024-09-19 06:20:58] [class-ss-generate-404-task.php:125] We're saving this URL; keeping the static file
-[2024-09-19 06:20:58] [class-ss-page.php:119] Checking Content Identical:b34c9685815bf497d758298287167548d9a0398b===. Value: FALSE
-[2024-09-19 06:20:58] [class-ss-task.php:44] Status message: [generate_404] 404 Page generated
-[2024-09-19 06:20:58] [class-ss-archive-creation-job.php:175] We've found our next task: transfer_files_locally
-[2024-09-19 06:20:58] [class-ss-archive-creation-job.php:136] Current task: transfer_files_locally
-[2024-09-19 06:20:58] [class-ss-archive-creation-job.php:153] Performing task: transfer_files_locally
-[2024-09-19 06:20:58] [class-ss-task.php:44] Status message: [transfer_files_locally] Transferring 16 of 16 files
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-content/uploads/2024/09
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/feed
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/comments/feed
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-includes/blocks/cover
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-includes/blocks/navigation
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/inter
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/2024/09/19/hello-world
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/2024/09/19/hello-world/feed
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/author/nityanavelkar
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-includes/js
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-includes/css/dist/block-library
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/author/nityanavelkar/feed
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:73] [Transfer] Total Pages:16. Processed Pages: 16
-[2024-09-19 06:20:58] [class-ss-task.php:44] Status message: [transfer_files_locally] Transferred 16 of 16 files
-[2024-09-19 06:20:58] [trait-can-process-pages.php:110] Total pages: 16; Pages remaining: 0
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:238] Transferring 404 Page
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:257] Destination 404 Page found at C:/xampp/htdocs/portfolio\404\index.html
-[2024-09-19 06:20:58] [class-ss-transfer-files-locally-task.php:261] Success
-[2024-09-19 06:20:58] [class-ss-task.php:44] Status message: [destination_url] Destination URL: <a href="https://nityanavelkar.github.io/portfolio/" target="_blank">https://nityanavelkar.github.io/portfolio/</a>
-[2024-09-19 06:20:58] [class-ss-archive-creation-job.php:175] We've found our next task: wrapup
-[2024-09-19 06:20:58] [class-ss-archive-creation-job.php:136] Current task: wrapup
-[2024-09-19 06:20:58] [class-ss-archive-creation-job.php:153] Performing task: wrapup
-[2024-09-19 06:20:58] [class-ss-wrapup-task.php:22] Deleting temporary files
-[2024-09-19 06:20:58] [class-ss-task.php:44] Status message: [wrapup] Wrapping up
-[2024-09-19 06:20:58] [class-ss-archive-creation-job.php:170] This task is done and there are no more tasks, time to complete the job
-[2024-09-19 06:20:58] [class-ss-archive-creation-job.php:197] Completing the job
-[2024-09-19 06:20:58] [class-ss-archive-creation-job.php:324] Status message: [done] Done! Finished in 00:00:09
+[2024-09-19 07:35:41] [class-ss-archive-creation-job.php:83] Starting a job; no job is presently running
+[2024-09-19 07:35:41] [class-ss-archive-creation-job.php:84] Here's our task list: setup, fetch_urls, generate_404, transfer_files_locally, wrapup
+[2024-09-19 07:35:41] [class-ss-archive-creation-job.php:102] Pushing first task to queue: setup
+[2024-09-19 07:35:42] [class-ss-archive-creation-job.php:136] Current task: setup
+[2024-09-19 07:35:42] [class-ss-archive-creation-job.php:153] Performing task: setup
+[2024-09-19 07:35:42] [class-ss-task.php:44] Status message: [setup] Setting up
+[2024-09-19 07:35:42] [class-ss-setup-task.php:33] Creating archive directory: C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341\
+[2024-09-19 07:35:42] [class-ss-setup-task.php:72] Adding origin URL to queue: http://localhost/portfolio/
+[2024-09-19 07:35:42] [class-ss-archive-creation-job.php:175] We've found our next task: fetch_urls
+[2024-09-19 07:35:42] [class-ss-archive-creation-job.php:136] Current task: fetch_urls
+[2024-09-19 07:35:42] [class-ss-archive-creation-job.php:153] Performing task: fetch_urls
+[2024-09-19 07:35:42] [class-ss-fetch-urls-task.php:69] Total pages: 1; Pages remaining: 1
+[2024-09-19 07:35:42] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/
+[2024-09-19 07:35:42] [class-ss-task.php:58] [PAGES STATUS] Remaining:1; Total: 1
+[2024-09-19 07:35:42] [class-ss-fetch-urls-task.php:83] URL is not being excluded
+[2024-09-19 07:35:42] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebd44ededf4-KTcBbF.tmp
+[2024-09-19 07:35:42] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/?simply_static_page=39
+[2024-09-19 07:35:42] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/?simply_static_page=39
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:103] Filesize: 45232 bytes
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html; charset=UTF-8
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:233] New filename for static page: /index.html
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebd44ededf4-KTcBbF.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341/index.html
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:159] Adding 10 URLs to the queue
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
+[2024-09-19 07:35:43] [class-ss-page.php:119] Checking Content Identical:9a61d42101cf830d903d38348fcb6f2c259ac050===. Value: FALSE
+[2024-09-19 07:35:43] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 0 of 1 pages/files
+[2024-09-19 07:35:43] [class-ss-archive-creation-job.php:181] We're not done with the fetch_urls task yet
+[2024-09-19 07:35:43] [class-ss-archive-creation-job.php:136] Current task: fetch_urls
+[2024-09-19 07:35:43] [class-ss-archive-creation-job.php:153] Performing task: fetch_urls
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:69] Total pages: 11; Pages remaining: 10
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-content/uploads/2024/09/DSC03458-3.jpg
+[2024-09-19 07:35:43] [class-ss-task.php:58] [PAGES STATUS] Remaining:10; Total: 11
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:83] URL is not being excluded
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebd44fd0ea4-jTJ7D1.tmp
+[2024-09-19 07:35:43] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-content/uploads/2024/09/DSC03458-3.jpg?simply_static_page=40
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-content/uploads/2024/09/DSC03458-3.jpg?simply_static_page=40
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:103] Filesize: 3021271 bytes
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: image/jpeg
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:233] New filename for static page: /wp-content/uploads/2024/09/DSC03458-3.jpg
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebd44fd0ea4-jTJ7D1.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341/wp-content/uploads/2024/09/DSC03458-3.jpg
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
+[2024-09-19 07:35:43] [class-ss-page.php:119] Checking Content Identical:311f6015079bb80a57f501e96f9d600661cf253c===. Value: FALSE
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/feed/
+[2024-09-19 07:35:43] [class-ss-task.php:58] [PAGES STATUS] Remaining:9; Total: 11
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:83] URL is not being excluded
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebd44fe6e2a-Nj5BYo.tmp
+[2024-09-19 07:35:43] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/feed/?simply_static_page=41
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/feed/?simply_static_page=41
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:103] Filesize: 1008 bytes
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html;charset=UTF-8
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:233] New filename for static page: /feed/index.html
+[2024-09-19 07:35:43] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebd44fe6e2a-Nj5BYo.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341/feed/index.html
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:159] Adding 3 URLs to the queue
+[2024-09-19 07:35:43] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
+[2024-09-19 07:35:43] [class-ss-page.php:119] Checking Content Identical:a4c7db8940fc4a9f9c4efce321b37ef7af5a605b===. Value: FALSE
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/comments/feed/
+[2024-09-19 07:35:44] [class-ss-task.php:58] [PAGES STATUS] Remaining:8; Total: 11
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:83] URL is not being excluded
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebd45001b0b-p3Z7Kh.tmp
+[2024-09-19 07:35:44] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/comments/feed/?simply_static_page=42
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/comments/feed/?simply_static_page=42
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:103] Filesize: 1035 bytes
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html;charset=UTF-8
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:233] New filename for static page: /comments/feed/index.html
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebd45001b0b-p3Z7Kh.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341/comments/feed/index.html
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:159] Adding 3 URLs to the queue
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
+[2024-09-19 07:35:44] [class-ss-page.php:119] Checking Content Identical:db659d38e627a25b1c5498ea24cb7412c4d93bbd===. Value: FALSE
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-includes/blocks/cover/style.min.css
+[2024-09-19 07:35:44] [class-ss-task.php:58] [PAGES STATUS] Remaining:7; Total: 11
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:83] URL is not being excluded
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebd450135f7-SmrGhY.tmp
+[2024-09-19 07:35:44] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-includes/blocks/cover/style.min.css?simply_static_page=43
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-includes/blocks/cover/style.min.css?simply_static_page=43
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:103] Filesize: 17950 bytes
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/css
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:233] New filename for static page: /wp-includes/blocks/cover/style.min.css
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebd450135f7-SmrGhY.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341/wp-includes/blocks/cover/style.min.css
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
+[2024-09-19 07:35:44] [class-ss-page.php:119] Checking Content Identical:62c549867e546e9b70dbba51b299d0a884dd5df3===. Value: FALSE
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-json/
+[2024-09-19 07:35:44] [class-ss-task.php:58] [PAGES STATUS] Remaining:6; Total: 11
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:79] Excludable found: URL: http://localhost/portfolio/wp-json/
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:89] Skipping URL because it is no-save and no-follow
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/xmlrpc.php
+[2024-09-19 07:35:44] [class-ss-task.php:58] [PAGES STATUS] Remaining:5; Total: 11
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:79] Excludable found: URL: http://localhost/portfolio/xmlrpc.php
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:89] Skipping URL because it is no-save and no-follow
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2
+[2024-09-19 07:35:44] [class-ss-task.php:58] [PAGES STATUS] Remaining:4; Total: 11
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:83] URL is not being excluded
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebd4502141b-lVlnEX.tmp
+[2024-09-19 07:35:44] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2?simply_static_page=46
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2?simply_static_page=46
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:103] Filesize: 326628 bytes
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: font/woff2
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:233] New filename for static page: /wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebd4502141b-lVlnEX.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341/wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
+[2024-09-19 07:35:44] [class-ss-page.php:119] Checking Content Identical:40546dbfd5c467c3257d8f3a4ad8af0d9995aeb6===. Value: FALSE
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2
+[2024-09-19 07:35:44] [class-ss-task.php:58] [PAGES STATUS] Remaining:3; Total: 11
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:83] URL is not being excluded
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebd4502c049-cgzSDl.tmp
+[2024-09-19 07:35:44] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2?simply_static_page=47
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2?simply_static_page=47
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:103] Filesize: 146060 bytes
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: font/woff2
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:233] New filename for static page: /wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebd4502c049-cgzSDl.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
+[2024-09-19 07:35:44] [class-ss-page.php:119] Checking Content Identical:b86a6f0bf3fb4777160165dfe37ca4e99b90216e===. Value: FALSE
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2
+[2024-09-19 07:35:44] [class-ss-task.php:58] [PAGES STATUS] Remaining:2; Total: 11
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:83] URL is not being excluded
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebd45035a6d-LoJa4W.tmp
+[2024-09-19 07:35:44] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2?simply_static_page=48
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2?simply_static_page=48
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:103] Filesize: 105184 bytes
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: font/woff2
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:233] New filename for static page: /wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebd45035a6d-LoJa4W.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
+[2024-09-19 07:35:44] [class-ss-page.php:119] Checking Content Identical:0fdff68c4027cf421d605798a1de46a061d160a3===. Value: FALSE
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2
+[2024-09-19 07:35:44] [class-ss-task.php:58] [PAGES STATUS] Remaining:1; Total: 11
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:83] URL is not being excluded
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebd4503ed28-nyLMEx.tmp
+[2024-09-19 07:35:44] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2?simply_static_page=49
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2?simply_static_page=49
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:103] Filesize: 132564 bytes
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: font/woff2
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:233] New filename for static page: /wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebd4503ed28-nyLMEx.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
+[2024-09-19 07:35:44] [class-ss-page.php:119] Checking Content Identical:dc56f8308f3385b427ce85c20b9afc471be17c60===. Value: FALSE
+[2024-09-19 07:35:44] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 1 of 11 pages/files
+[2024-09-19 07:35:44] [class-ss-archive-creation-job.php:181] We're not done with the fetch_urls task yet
+[2024-09-19 07:35:44] [class-ss-archive-creation-job.php:136] Current task: fetch_urls
+[2024-09-19 07:35:44] [class-ss-archive-creation-job.php:153] Performing task: fetch_urls
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:69] Total pages: 14; Pages remaining: 3
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/feed/index.xml
+[2024-09-19 07:35:44] [class-ss-task.php:58] [PAGES STATUS] Remaining:3; Total: 14
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:83] URL is not being excluded
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebd4504abbc-WaViT1.tmp
+[2024-09-19 07:35:44] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/feed/index.xml?simply_static_page=50
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/feed/index.xml?simply_static_page=50
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:103] Filesize: 1761 bytes
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: application/xml
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:233] New filename for static page: /feed/index.xml
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebd4504abbc-WaViT1.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341/feed/index.xml
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
+[2024-09-19 07:35:44] [class-ss-page.php:119] Checking Content Identical:9e9af609b8497c2a9a71b268993b9706f3faa5d7===. Value: FALSE
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/comments/
+[2024-09-19 07:35:44] [class-ss-task.php:58] [PAGES STATUS] Remaining:2; Total: 14
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:83] URL is not being excluded
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebd45053d19-ujISMt.tmp
+[2024-09-19 07:35:44] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/comments/?simply_static_page=51
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/comments/?simply_static_page=51
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:103] Filesize: 1011 bytes
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html;charset=UTF-8
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:233] New filename for static page: /comments/index.html
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebd45053d19-ujISMt.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341/comments/index.html
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:159] Adding 3 URLs to the queue
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
+[2024-09-19 07:35:44] [class-ss-page.php:119] Checking Content Identical:2f1c60ee808adf6422b3ee70873ee0c30ce5f847===. Value: FALSE
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:72] URL: http://localhost/portfolio/comments/feed/index.xml
+[2024-09-19 07:35:44] [class-ss-task.php:58] [PAGES STATUS] Remaining:1; Total: 14
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:83] URL is not being excluded
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebd45065b6c-aq7uju.tmp
+[2024-09-19 07:35:44] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/comments/feed/index.xml?simply_static_page=52
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/comments/feed/index.xml?simply_static_page=52
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:103] Filesize: 1698 bytes
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: application/xml
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:233] New filename for static page: /comments/feed/index.xml
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebd45065b6c-aq7uju.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341/comments/feed/index.xml
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:152] Extracting URLs and replacing URLs in the static file
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:159] Adding 0 URLs to the queue
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:170] We're saving this URL; keeping the static file
+[2024-09-19 07:35:44] [class-ss-page.php:119] Checking Content Identical:799da9719044808441d0838e54f9af10a971a4c8===. Value: FALSE
+[2024-09-19 07:35:44] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 11 of 14 pages/files
+[2024-09-19 07:35:44] [class-ss-archive-creation-job.php:181] We're not done with the fetch_urls task yet
+[2024-09-19 07:35:44] [class-ss-archive-creation-job.php:136] Current task: fetch_urls
+[2024-09-19 07:35:44] [class-ss-archive-creation-job.php:153] Performing task: fetch_urls
+[2024-09-19 07:35:44] [class-ss-fetch-urls-task.php:69] Total pages: 14; Pages remaining: 0
+[2024-09-19 07:35:44] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 14 of 14 pages/files
+[2024-09-19 07:35:44] [class-ss-archive-creation-job.php:175] We've found our next task: generate_404
+[2024-09-19 07:35:44] [class-ss-archive-creation-job.php:136] Current task: generate_404
+[2024-09-19 07:35:44] [class-ss-archive-creation-job.php:153] Performing task: generate_404
+[2024-09-19 07:35:44] [class-ss-task.php:44] Status message: [generate_404] Generating 404 Page.
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: C:\Users\nitya\AppData\Local\Temp/66ebd45072fdc-0vqWlN.tmp
+[2024-09-19 07:35:44] [class-ss-page-handler.php:38] URL Prepared:http://localhost/portfolio/1726731345?simply_static_page=0
+[2024-09-19 07:35:44] [class-ss-url-fetcher.php:251] Fetching URL: http://localhost/portfolio/1726731345?simply_static_page=0
+[2024-09-19 07:35:45] [class-ss-url-fetcher.php:103] Filesize: 51690 bytes
+[2024-09-19 07:35:45] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2024-09-19 07:35:45] [class-ss-url-fetcher.php:233] New filename for static page: 404/index.html
+[2024-09-19 07:35:45] [class-ss-url-fetcher.php:143] Renaming temp file from C:\Users\nitya\AppData\Local\Temp/66ebd45072fdc-0vqWlN.tmp to C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\temp-files/simply-static-1-1726731341\404/index.html
+[2024-09-19 07:35:45] [class-ss-generate-404-task.php:119] Replacing URLs in the static file
+[2024-09-19 07:35:45] [class-ss-generate-404-task.php:125] We're saving this URL; keeping the static file
+[2024-09-19 07:35:45] [class-ss-page.php:119] Checking Content Identical:8572ee65d6d3e7be139fb36f74954e3701e5c8f4===. Value: FALSE
+[2024-09-19 07:35:45] [class-ss-task.php:44] Status message: [generate_404] 404 Page generated
+[2024-09-19 07:35:45] [class-ss-archive-creation-job.php:175] We've found our next task: transfer_files_locally
+[2024-09-19 07:35:45] [class-ss-archive-creation-job.php:136] Current task: transfer_files_locally
+[2024-09-19 07:35:45] [class-ss-archive-creation-job.php:153] Performing task: transfer_files_locally
+[2024-09-19 07:35:45] [class-ss-task.php:44] Status message: [transfer_files_locally] Transferring 12 of 12 files
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-content/uploads/2024/09
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/feed
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/comments/feed
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-includes/blocks/cover
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/inter
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/wp-content/themes/twentytwentyfour/assets/fonts/cardo
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/feed
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/comments
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:102] Trying to transfer: C:/xampp/htdocs/portfolio/comments/feed
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:73] [Transfer] Total Pages:12. Processed Pages: 12
+[2024-09-19 07:35:45] [class-ss-task.php:44] Status message: [transfer_files_locally] Transferred 12 of 12 files
+[2024-09-19 07:35:45] [trait-can-process-pages.php:110] Total pages: 12; Pages remaining: 0
+[2024-09-19 07:35:45] [class-ss-transfer-files-locally-task.php:238] Transferring 404 Page
+[2024-09-19 07:35:45] [class-ss-task.php:44] Status message: [destination_url] Destination URL: <a href="https://nityanavelkar.github.io/portfolio/" target="_blank">https://nityanavelkar.github.io/portfolio/</a>
+[2024-09-19 07:35:45] [class-ss-archive-creation-job.php:175] We've found our next task: wrapup
+[2024-09-19 07:35:45] [class-ss-archive-creation-job.php:136] Current task: wrapup
+[2024-09-19 07:35:45] [class-ss-archive-creation-job.php:153] Performing task: wrapup
+[2024-09-19 07:35:45] [class-ss-wrapup-task.php:22] Deleting temporary files
+[2024-09-19 07:35:45] [class-ss-task.php:44] Status message: [wrapup] Wrapping up
+[2024-09-19 07:35:45] [class-ss-archive-creation-job.php:170] This task is done and there are no more tasks, time to complete the job
+[2024-09-19 07:35:45] [class-ss-archive-creation-job.php:197] Completing the job
+[2024-09-19 07:35:45] [class-ss-archive-creation-job.php:324] Status message: [done] Done! Finished in 00:00:04
