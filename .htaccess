@@ -41,7 +41,7 @@ CacheKeyModify -qs:_ga
 # The directives (lines) between "BEGIN Simply Static" and "END Simply Static" are
 # dynamically generated, and should only be modified via WordPress filters.
 # Any changes to the directives between these markers will be overwritten.
-<Files "C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\08703b7d6c4ace07c711d2b1711702d5-debug.txt">
+<Files "C:\xampp\htdocs\portfolio/wp-content/uploads\simply-static\3dcc5abe7151a3a3127fc0cf7ac48b8b-debug.txt">
 require all denied
 require host localhost
 </Files>
