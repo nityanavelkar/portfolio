@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*! elementor - v3.25.0 - 13-11-2024 */
+=======
+/*! elementor - v3.24.0 - 18-09-2024 */
+>>>>>>> parent of e39aafdf (update)
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["frontend-modules"],{
 
 /***/ "../assets/dev/js/editor/utils/is-instanceof.js":

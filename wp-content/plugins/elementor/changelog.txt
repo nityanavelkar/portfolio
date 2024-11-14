@@ -1,5 +1,6 @@
 == Changelog ==
 
+<<<<<<< HEAD
 = 3.25.6 - 2024-11-13 =
 
 * Tweak: Updated `eicons` library to v5.32.0
@@ -82,6 +83,8 @@
 * Security Fix: Improved code security enforcement in Heading and Counter widgets
 * Security Fix: Improved code security enforcement in Template Library
 
+=======
+>>>>>>> parent of e39aafdf (update)
 = 3.24.3 - 2024-09-18 =
 
 * Fix: 404 console error when loading custom animations ([#28727](https://github.com/elementor/elementor/issues/28727))
