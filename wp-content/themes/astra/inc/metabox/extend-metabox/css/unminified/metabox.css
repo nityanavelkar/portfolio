@@ -177,7 +177,6 @@ div#astra_settings_meta_box {
 }
 .ast-header-settings-modal .components-modal__header {
     padding-left: 24px;
-    padding-right: 0;
     border-bottom: 0;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -2074,7 +2073,7 @@ a.ast-pro-upgrade-link {
   font-weight: 400;
 }
 
-.components-base-control .components-base-control__field .components-input-control__backdrop {
+.ast-sidebar-container .components-base-control .components-base-control__field .components-input-control__backdrop {
   border-color: #D1D5DB !important;
 }
 

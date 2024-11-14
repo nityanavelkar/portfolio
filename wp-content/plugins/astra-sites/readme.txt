@@ -5,7 +5,7 @@ Tags: Elementor,Templates,Gutenberg,Block Editor,Astra Starter Sites
 Requires at least: 4.4
 Requires PHP: 7.4
 Tested up to: 6.6.1
-Stable tag: 4.4.2
+Stable tag: 4.4.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -246,6 +246,64 @@ Once your website is generated, you have complete control over its content and l
 6. Use the power of AI with a single click to write copy, proofread, translate content into different languages. Adjust content length and tone seamlessly for maximum appeal.
 
 == Changelog ==
+
+v4.4.7 - 04-November-2024
+- New:
+    - AI builder: Added compatibility for importing SureForms templates.
+    - AI builder: Added filter to hide specified features on feature selection screen.
+- Improvement:
+    - Prompted users for detailed business descriptions to enhance content generation.
+    - Enabled SureCart provisional account creation when the eCommerce feature is selected.
+    - Added page builder selection screen for classic templates.
+    - Added pre-import warning to alert users about potential overrides of existing settings during template import.
+    - Hiding non-FSE page builder options when the Spectra One theme is active.
+    - Design Kit: Generating business description based on the selected language.
+    - Design Kit: Optimized styles for better readability and usability on smaller screens.
+    - AI Assistant: Resolved PHP fatal error caused by a conflict with certain plugins.
+
+v4.4.6 - 16-October-2024
+- Fix: Updated outdated migrations that were causing PHP errors.
+
+v4.4.5 - 15-October-2024
+- New:
+    - AI Builder: Implemented toasters to provide more detailed error information.
+    - AI Builder: Added source parameters to URLs redirecting to ZipWP for better tracking.
+    - Design Kit: Added source parameters to URLs redirecting to ZipWP for better tracking.
+- Tweak: Refactored the NPS code by separating it into an independent NPS library.
+- Improvement: 
+    - Design Kit: Removed outdated options data that were previously left undeleted.
+    - Design Kit: Optimized server API call execution for better performance.
+    - Enhanced code quality and optimization for better performance and maintainability.
+- Fix: 
+    - Free Images: Fixed broken UI components for Elementor and Beaver Builder.
+
+v4.4.4 - 07-October-2024
+- Fix: Resolved issue where the selected page builder was resetting after a page refresh.
+- Fix: Corrected CSS issues affecting the appearance and functionality of checkboxes on the feature page.
+
+v4.4.3 - 30-September-2024
+- New: 
+    - AI Builder: Added functionality to save failed site creations and allow reimporting them.
+    - AI Builder: Displaying users ZipWP plan information.
+    - AI Builder: Displaying alert notice when AI site generation count is nearing its limit.
+    - AI Builder: Added an option to choose the type of store when the Ecommerce feature is selected.
+    - Design Kit: Introduced filter `ast_block_templates_exclude_post_types` to exclude asset loading for specified post types.
+    - Introduced eCommerce feature for classic templates along with some UI tweaks.
+    - NPS form now includes a back button for better usability and rating edits.
+- Improvements:
+    - AI Builder: Resume Session popup will now restore the step where the user left off.
+    - AI Builder: Improved images upload process for better performance and user experience.
+    - AI Builder: Showing Premium template notice on customizer screen if user has free plan.
+    - AI Builder: Added a validation on Image upload to check if the image URL is valid.
+    - Design Kit: Added loading skeleton when uploading the images on AI onboarding.
+    - Design Kit: Added images validation on AI onboarding. 
+
+- Fix: 
+    - AI Builder: Customizer 'Show site title' option was not applied correctly during site import.
+    - Design Kit: Resolved CSS conflicts with the WordPress core blocks.
+    - Design Kit: Fixed PHP warning when generating content.
+    - Design Kit: Content was not getting generated in the selected language.
+    - Images Library: Resolved issue where image search results reset to default after applying filters.
 
 v4.4.2 - 03-September-2024
 - New: 

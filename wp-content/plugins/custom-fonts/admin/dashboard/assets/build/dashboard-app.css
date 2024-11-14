@@ -1,5 +1,111 @@
-/*
-! tailwindcss v3.3.1 | MIT License | https://tailwindcss.com
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}/*
+! tailwindcss v3.4.13 | MIT License | https://tailwindcss.com
 *//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -26,17 +132,20 @@
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
 */
 
-html {
+html,
+:host {
   line-height: 1.5; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
   font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
 }
 
 /*
@@ -103,8 +212,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -112,7 +223,9 @@ kbd,
 samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
 }
 
 /*
@@ -167,9 +280,12 @@ optgroup,
 select,
 textarea {
   font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
   font-size: 100%; /* 1 */
   font-weight: inherit; /* 1 */
   line-height: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
   color: inherit; /* 1 */
   margin: 0; /* 2 */
   padding: 0; /* 3 */
@@ -190,9 +306,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button; /* 1 */
   background-color: transparent; /* 2 */
   background-image: none; /* 2 */
@@ -301,6 +417,13 @@ ul,
 menu {
   list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+dialog {
   padding: 0;
 }
 
@@ -540,100 +663,6 @@ select {
 
 [type='file']:focus {
   outline: 1px auto -webkit-focus-ring-color;
-}
-
-*, ::before, ::after {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
-
-::backdrop {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
 }.sr-only {
   position: absolute;
   width: 1px;
@@ -700,8 +729,6 @@ select {
   margin-right: 1rem;
 }.mr-\[-20px\] {
   margin-right: -20px;
-}.mt-1 {
-  margin-top: 0.25rem;
 }.mt-1\.5 {
   margin-top: 0.375rem;
 }.mt-3 {
@@ -730,8 +757,6 @@ select {
   display: contents;
 }.hidden {
   display: none;
-}.h-1 {
-  height: 0.25rem;
 }.h-1\.5 {
   height: 0.375rem;
 }.h-4 {
@@ -818,8 +843,6 @@ select {
   justify-content: center;
 }.justify-between {
   justify-content: space-between;
-}.gap-1 {
-  gap: 0.25rem;
 }.gap-1\.5 {
   gap: 0.375rem;
 }.gap-5 {
@@ -841,8 +864,6 @@ select {
 }.gap-x-6 {
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
-}.gap-y-3 {
-  row-gap: 0.75rem;
 }.gap-y-3\.5 {
   row-gap: 0.875rem;
 }.divide-y > :not([hidden]) ~ :not([hidden]) {
@@ -1067,7 +1088,7 @@ select {
 }.backdrop-blur-sm {
   --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }.transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1098,7 +1119,7 @@ select {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }.ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}.appearance_page_bsf-custom-fonts #wpbody-content{padding-bottom:10px}.appearance_page_bsf-custom-fonts #wpbody-content .components-button{line-height:36px}.appearance_page_bsf-custom-fonts #wpbody-content button.components-button.is-secondary,.appearance_page_bsf-custom-fonts #wpbody-content button.components-button.is-secondary:hover,.appearance_page_bsf-custom-fonts #wpbody-content button.components-button.is-secondary:focus{background-color:rgba(0,0,0,0)}body.appearance_page_bsf-custom-fonts input,body.appearance_page_bsf-custom-fonts select,body.appearance_page_bsf-custom-fonts button.font-file-uploader.btn{border-color:#ddd}button.text-danger.components-button.is-secondary,button.text-danger.components-button.is-secondary:hover,button.text-danger.components-button.is-secondary:focus{color:rgb(230 80 84/var(--tw-text-opacity))}button.border-danger.components-button.is-secondary,button.border-danger.components-button.is-secondary:hover,button.border-danger.components-button.is-secondary:active{box-shadow:inset 0 0 0 1px #e65054}body .active-state.transition-colors>.border-light{border-top:0 !important}body .active-state.transition-colors{border-bottom:1px solid #ddd}.bcf-font-list-wrap .active-state.transition-colors:first-child{border-top:1px solid #ddd}.bcf-add-new-font-page.appearance_page_bsf-custom-fonts #wpbody-content{padding-bottom:0}button.bcf-save-font[disabled]{opacity:.8}.appearance_page_bsf-custom-fonts .bcf-edit-dialog-panel{top:20%;position:absolute;left:22%;max-width:65%;width:100%;max-height:60vh;overflow:hidden;padding-right:40px}.border.bcf-font-list-wrap{border-bottom:0;border-top:0}.bcf-font-list-wrap .transition-colors:last-child>div.border-b{border-bottom-width:1px}.bcf-font-list-wrap .transition-colors:first-child>div.border-b{border-top-width:1px}.bcf-add-new-font-page #wpfooter,.bcf-add-new-font-page .clear{display:none}.bsf-cf-menu-page-wrapper{font-family:"Inter";font-style:normal}.bsf-cf-menu-page-wrapper .snack-bar-saved .components-snackbar{background-color:#fff;color:#3c434a;font-size:12px;border-left:5px solid #00a32a;animation-name:slideIn;animation-duration:.5s;animation-timing-function:ease;animation-fill-mode:forwards;padding:10px 50px 10px 10px;position:fixed;top:7%;left:55% !important}.snack-bar-added .components-snackbar{background-color:#fff;color:#3c434a;font-size:12px;border-left:5px solid #00a32a;animation-name:slideIn;animation-duration:.5s;animation-timing-function:ease;animation-fill-mode:forwards;padding:10px 50px 10px 10px;position:fixed;top:6%;left:55%}.snack-bar-removed .components-snackbar{background-color:#fff;color:#3c434a;border-left:5px solid #b90303;font-size:12px;animation-name:slideIn;animation-duration:.5s;animation-timing-function:ease;animation-fill-mode:forwards;padding:10px 50px 10px 10px;position:fixed;top:7%;left:55%}.bcf-edit-dialog-panel .snack-bar-added .components-snackbar,.bcf-edit-dialog-panel .snack-bar-removed .components-snackbar{bottom:12% !important;animation-duration:1s;animation-name:slideInSmall;top:80%}@keyframes slideIn{0%{top:-100%}100%{top:6%}}@keyframes slideInSmall{0%{left:-100%}100%{left:2%}}.text-primary{color:#3858e9}.appearance_page_bsf-custom-fonts #wpcontent{padding-left:0}.bsf-custom-font-dashboard-app input,.bsf-custom-font-dashboard-app select{border:1px solid #ddd;border-radius:2px;height:30px}.bsf-custom-font-dashboard-app input[type=file]{border:0}.bsf-custom-font-search input{border:0;background:rgba(0,0,0,0);padding:18px 0}.bsf-custom-font-search input:focus{outline:none;border:0;border-color:rgba(0,0,0,0);box-shadow:none}button.font-file-uploader.btn{border:1px solid #767676;margin:0px;padding:1px 6px;border-radius:2px;line-height:1.6}span.font-filename{margin-left:-10px;width:90px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.font-triggers{position:absolute;right:10px;display:inline-flex;align-items:center;gap:10px}.bcf-font-list-wrap.skeleton-wrap>.border-b:first-child,.bcf-font-list-wrap>.active-state:not(:first-child)>.list-font-title,.bcf-font-list-wrap>.active-state .list-font-variations>.font-variation-item:not(:first-child){border-top:1px solid #ddd}.bcf-font-size-range .components-input-control__container{position:relative}.bcf-font-size-range .components-input-control__container .components-input-control__backdrop:before{position:absolute;content:"PX";right:4px;padding-left:4px;border-left:1px solid #949494;font-weight:600;top:-1px;color:#949494;font-size:11px;line-height:30px}.bcf-font-size-range .components-input-control__container input::-webkit-outer-spin-button,.bcf-font-size-range .components-input-control__container input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}.bcf-font-size-range .components-input-control__container input[type=number]{-moz-appearance:textfield}.edit-font-variation-wrap select{padding-top:2px;padding-bottom:2px}.font-file-uploader:focus-visible{outline:none}.edit-gfont-variation-item,#bcf-google-font-selection option:disabled{display:none}.local-fonts-preview-wrapper,.google-fonts-preview-wrapper{border:none}#wpbody-content>.notice{margin-bottom:20px}.bcf-footer-thankyou{font-size:13px;margin:0;line-height:1.55}.bcf-footer-thankyou a{color:#2271b1;text-decoration:underline}.text-sm{font-weight:500}.font-normal.text-sm{font-weight:400}.font-triggers svg{width:25px;padding:5px;cursor:pointer;margin-top:-5px}.active-state.transition-colors .title-area{box-shadow:inset 5px 0 0 0 var(--wp-admin-theme-color);transition:box-shadow .1s linear;background-color:#e5f1f8}.media-modal-content .media-frame-router .media-router:after{content:"(Use Shift for multiple selection.)";font-size:14px;font-style:italic;vertical-align:middle;font-weight:500;margin-left:20px}.settings-toggle-bg:after{content:"";position: absolute;top: 0.125rem;left: 0.125rem;height: 1.25rem;width: 1.25rem;border-radius: 9999px;border-width: 1px;--tw-border-opacity: 1;border-color: rgb(209 213 219 / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color: rgb(255 255 255 / var(--tw-bg-opacity));--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);transition-duration: 150ms}.settings-toggle-bg.bcf-font-list-wrap:after{border-bottom:0;border-top:0}input:checked+.settings-toggle-bg:after{transform:translateX(100%);--tw-border-opacity: 1;border-color: rgb(255 255 255 / var(--tw-border-opacity))}input:checked+.settings-toggle-bg {
+}.appearance_page_bsf-custom-fonts #wpbody-content{padding-bottom:10px}.appearance_page_bsf-custom-fonts #wpbody-content .components-button{line-height:36px}.appearance_page_bsf-custom-fonts #wpbody-content button.components-button.is-secondary,.appearance_page_bsf-custom-fonts #wpbody-content button.components-button.is-secondary:hover,.appearance_page_bsf-custom-fonts #wpbody-content button.components-button.is-secondary:focus{background-color:rgba(0,0,0,0)}body.appearance_page_bsf-custom-fonts input,body.appearance_page_bsf-custom-fonts select,body.appearance_page_bsf-custom-fonts button.font-file-uploader.btn{border-color:#ddd}button.text-danger.components-button.is-secondary,button.text-danger.components-button.is-secondary:hover,button.text-danger.components-button.is-secondary:focus{color:rgb(230, 80, 84, var(--tw-text-opacity))}button.border-danger.components-button.is-secondary,button.border-danger.components-button.is-secondary:hover,button.border-danger.components-button.is-secondary:active{box-shadow:inset 0 0 0 1px #e65054}body .active-state.transition-colors>.border-light{border-top:0 !important}body .active-state.transition-colors{border-bottom:1px solid #ddd}.bcf-font-list-wrap .active-state.transition-colors:first-child{border-top:1px solid #ddd}.bcf-add-new-font-page.appearance_page_bsf-custom-fonts #wpbody-content{padding-bottom:0}button.bcf-save-font[disabled]{opacity:.8}.appearance_page_bsf-custom-fonts .bcf-edit-dialog-panel{top:20%;position:absolute;left:22%;max-width:65%;width:100%;max-height:60vh;overflow:hidden;padding-right:40px}.border.bcf-font-list-wrap{border-bottom:0;border-top:0}.bcf-font-list-wrap .transition-colors:last-child>div.border-b{border-bottom-width:1px}.bcf-font-list-wrap .transition-colors:first-child>div.border-b{border-top-width:1px}.bcf-add-new-font-page #wpfooter,.bcf-add-new-font-page .clear{display:none}.bsf-cf-menu-page-wrapper{font-family:"Inter";font-style:normal}.bsf-cf-menu-page-wrapper .snack-bar-saved .components-snackbar{background-color:#fff;color:#3c434a;font-size:12px;border-left:5px solid #00a32a;animation-name:slideIn;animation-duration:.5s;animation-timing-function:ease;animation-fill-mode:forwards;padding:10px 50px 10px 10px;position:fixed;top:7%;left:55% !important}.snack-bar-added .components-snackbar{background-color:#fff;color:#3c434a;font-size:12px;border-left:5px solid #00a32a;animation-name:slideIn;animation-duration:.5s;animation-timing-function:ease;animation-fill-mode:forwards;padding:10px 50px 10px 10px;position:fixed;top:6%;left:55%}.snack-bar-removed .components-snackbar{background-color:#fff;color:#3c434a;border-left:5px solid #b90303;font-size:12px;animation-name:slideIn;animation-duration:.5s;animation-timing-function:ease;animation-fill-mode:forwards;padding:10px 50px 10px 10px;position:fixed;top:7%;left:55%}.bcf-edit-dialog-panel .snack-bar-added .components-snackbar,.bcf-edit-dialog-panel .snack-bar-removed .components-snackbar{bottom:12% !important;animation-duration:1s;animation-name:slideInSmall;top:80%}@keyframes slideIn{0%{top:-100%}100%{top:6%}}@keyframes slideInSmall{0%{left:-100%}100%{left:2%}}.text-primary{color:#3858e9}.appearance_page_bsf-custom-fonts #wpcontent{padding-left:0}.bsf-custom-font-dashboard-app input,.bsf-custom-font-dashboard-app select{border:1px solid #ddd;border-radius:2px;height:30px}.bsf-custom-font-dashboard-app input[type=file]{border:0}.bsf-custom-font-search input{border:0;background:rgba(0,0,0,0);padding:18px 0}.bsf-custom-font-search input:focus{outline:none;border:0;border-color:rgba(0,0,0,0);box-shadow:none}button.font-file-uploader.btn{border:1px solid #767676;margin:0px;padding:1px 6px;border-radius:2px;line-height:1.6}span.font-filename{margin-left:-10px;width:90px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.font-triggers{position:absolute;right:10px;display:inline-flex;align-items:center;gap:10px}.bcf-font-list-wrap.skeleton-wrap>.border-b:first-child,.bcf-font-list-wrap>.active-state:not(:first-child)>.list-font-title,.bcf-font-list-wrap>.active-state .list-font-variations>.font-variation-item:not(:first-child){border-top:1px solid #ddd}.bcf-font-size-range .components-input-control__container{position:relative}.bcf-font-size-range .components-input-control__container .components-input-control__backdrop:before{position:absolute;content:"PX";right:4px;padding-left:4px;border-left:1px solid #949494;font-weight:600;top:-1px;color:#949494;font-size:11px;line-height:30px}.bcf-font-size-range .components-input-control__container input::-webkit-outer-spin-button,.bcf-font-size-range .components-input-control__container input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}.bcf-font-size-range .components-input-control__container input[type=number]{-moz-appearance:textfield}.edit-font-variation-wrap select{padding-top:2px;padding-bottom:2px}.font-file-uploader:focus-visible{outline:none}.edit-gfont-variation-item,#bcf-google-font-selection option:disabled{display:none}.local-fonts-preview-wrapper,.google-fonts-preview-wrapper{border:none}#wpbody-content>.notice{margin-bottom:20px}.bcf-footer-thankyou{font-size:13px;margin:0;line-height:1.55}.bcf-footer-thankyou a{color:#2271b1;text-decoration:underline}.text-sm{font-weight:500}.font-normal.text-sm{font-weight:400}.font-triggers svg{width:25px;padding:5px;cursor:pointer;margin-top:-5px}.active-state.transition-colors .title-area{box-shadow:inset 5px 0 0 0 var(--wp-admin-theme-color);transition:box-shadow .1s linear;background-color:#e5f1f8}.media-modal-content .media-frame-router .media-router:after{content:"(Use Shift for multiple selection.)";font-size:14px;font-style:italic;vertical-align:middle;font-weight:500;margin-left:20px}.settings-toggle-bg:after{content:"";position: absolute;top: 0.125rem;left: 0.125rem;height: 1.25rem;width: 1.25rem;border-radius: 9999px;border-width: 1px;--tw-border-opacity: 1;border-color: rgb(209 213 219 / var(--tw-border-opacity));--tw-bg-opacity: 1;background-color: rgb(255 255 255 / var(--tw-bg-opacity));--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);transition-duration: 150ms}.settings-toggle-bg.bcf-font-list-wrap:after{border-bottom:0;border-top:0}input:checked+.settings-toggle-bg:after{transform:translateX(100%);--tw-border-opacity: 1;border-color: rgb(255 255 255 / var(--tw-border-opacity))}input:checked+.settings-toggle-bg {
   --tw-border-opacity: 1;
   border-color: rgb(37 99 235 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
