@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 /*! elementor - v3.25.0 - 13-11-2024 */
-=======
-/*! elementor - v3.24.0 - 18-09-2024 */
->>>>>>> parent of e39aafdf (update)
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["modules_nested-elements_assets_js_editor_nested-element-types-base_js"],{
 
 /***/ "../modules/nested-elements/assets/js/editor/nested-element-types-base.js":

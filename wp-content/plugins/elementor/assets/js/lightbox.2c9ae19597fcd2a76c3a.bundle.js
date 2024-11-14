@@ -1,9 +1,4 @@
-<<<<<<< HEAD:wp-content/plugins/elementor/assets/js/lightbox.2c9ae19597fcd2a76c3a.bundle.js
 /*! elementor - v3.25.0 - 13-11-2024 */
-=======
-/*! elementor - v3.24.0 - 18-09-2024 */
-"use strict";
->>>>>>> parent of e39aafdf (update):wp-content/plugins/elementor/assets/js/lightbox.62507767544e8d455e1b.bundle.js
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["lightbox"],{
 
 /***/ "../assets/dev/js/frontend/utils/icons/e-icons.js":

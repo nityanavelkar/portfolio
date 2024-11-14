@@ -1,8 +1,4 @@
-<<<<<<< HEAD:wp-content/plugins/elementor/assets/js/text-path.a20877e832db83423958.bundle.js
 /*! elementor - v3.25.0 - 13-11-2024 */
-=======
-/*! elementor - v3.24.0 - 18-09-2024 */
->>>>>>> parent of e39aafdf (update):wp-content/plugins/elementor/assets/js/text-path.fa44919c1abfe9244186.bundle.js
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["text-path"],{
 
 /***/ "../modules/shapes/assets/js/frontend/handlers/text-path.js":

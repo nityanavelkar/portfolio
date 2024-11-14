@@ -4,11 +4,7 @@
  * Description: The Elementor Website Builder has it all: drag and drop page builder, pixel perfect design, mobile responsive editing, and more. Get started now!
  * Plugin URI: https://elementor.com/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash
  * Author: Elementor.com
-<<<<<<< HEAD
  * Version: 3.25.6
-=======
- * Version: 3.24.3
->>>>>>> parent of e39aafdf (update)
  * Author URI: https://elementor.com/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash
  *
  * Text Domain: elementor
@@ -31,11 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-<<<<<<< HEAD
 define( 'ELEMENTOR_VERSION', '3.25.6' );
-=======
-define( 'ELEMENTOR_VERSION', '3.24.3' );
->>>>>>> parent of e39aafdf (update)
 
 define( 'ELEMENTOR__FILE__', __FILE__ );
 define( 'ELEMENTOR_PLUGIN_BASE', plugin_basename( ELEMENTOR__FILE__ ) );
