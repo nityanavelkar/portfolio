@@ -1,15 +1,10 @@
-import { memo } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
-import { MediaUpload } from '@wordpress/media-utils';
-import { useDispatch, useSelect } from '@wordpress/data';
-
-import toast from 'react-hot-toast';
-
-import { classNames, toastBody } from '../helpers';
-import { STORE_KEY } from '../store';
-import { isValidImageURL } from '../utils/helpers';
-
 import { ArrowUpTrayIcon } from '@heroicons/react/24/outline';
+import { memo } from '@wordpress/element';
+import { useDispatch, useSelect } from '@wordpress/data';
+import { MediaUpload } from '@wordpress/media-utils';
+import { STORE_KEY } from '../store';
+import { classNames } from '../helpers';
+import { __ } from '@wordpress/i18n';
 
 const UploadImage = ( { render } ) => {
 	const { setWebsiteImagesAIStep } = useDispatch( STORE_KEY );
@@ -48,25 +43,6 @@ const UploadImage = ( { render } ) => {
 				}
 				onSelect={ ( media ) => {
 					const uploadedImages = media
-						.map( ( image ) => {
-							if ( isValidImageURL( image?.url ) ) {
-								return image;
-							}
-							toast.error(
-								toastBody( {
-									message: sprintf(
-										/* translators: %s: file name */
-										__(
-											'Invalid file name! Please avoid special characters. (%s)',
-											'ai-builder'
-										),
-										image?.filename
-									),
-								} )
-							);
-							return null;
-						} )
-						.filter( ( image ) => image !== null )
 						.map( ( image ) => ( {
 							id: String( image.id ),
 							url: image?.originalImageURL ?? image.url,

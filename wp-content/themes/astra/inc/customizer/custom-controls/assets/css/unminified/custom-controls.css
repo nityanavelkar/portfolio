@@ -1591,10 +1591,11 @@ input[type="text"], input[type="password"], input[type="color"], input[type="dat
   margin-top: 15px;
 }
 
-#customize-controls .components-base-control .components-base-control__field {
+.components-base-control .components-base-control__field {
   margin-bottom: 0;
 }
-#customize-controls .components-base-control .components-base-control__field .components-input-control__backdrop {
+
+.components-base-control .components-base-control__field .components-input-control__backdrop {
   border-color: #D1D5DB !important;
 }
 

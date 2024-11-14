@@ -4,10 +4,6 @@ namespace Elementor\Modules\AtomicWidgets\Base;
 
 use JsonSerializable;
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-
 abstract class Atomic_Control_Base implements JsonSerializable {
 	private string $bind;
 	private $label = null;

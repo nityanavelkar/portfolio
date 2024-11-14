@@ -36,9 +36,6 @@ const selectors = {
 	getContinueProgressModalInfo( { continueProgressModal } ) {
 		return continueProgressModal;
 	},
-	getPlanInfoModalInfo( { planInformationModal } ) {
-		return planInformationModal;
-	},
 	getDisableAi( { disableAi } ) {
 		return disableAi;
 	},
@@ -70,16 +67,8 @@ const selectors = {
 		return siteFeatures;
 	},
 
-	getSiteFeaturesData( state ) {
-		return state.stepData?.siteFeaturesData || {};
-	},
-
 	getSiteLogo( { stepData: { siteLogo } } ) {
 		return siteLogo;
-	},
-
-	getSiteTitleVisible( { stepData: { siteTitleVisible } } ) {
-		return siteTitleVisible;
 	},
 
 	getActiveColorPalette( { stepData: { activeColorPalette } } ) {
@@ -100,10 +89,6 @@ const selectors = {
 
 	getLoadingNextStep( { loadingNextStep } ) {
 		return loadingNextStep;
-	},
-
-	getFailedSites( { failedSites } ) {
-		return failedSites;
 	},
 };
 

@@ -3,6 +3,8 @@
  * Post Structures loader for Astra theme.
  *
  * @package     Astra
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2022, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       Astra 4.0.0
  */

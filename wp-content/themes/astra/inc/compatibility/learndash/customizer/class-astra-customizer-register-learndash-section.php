@@ -3,6 +3,8 @@
  * Register customizer panels & sections.
  *
  * @package     Astra
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2020, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       1.2.0
  * @since       1.4.6 Chnaged to using Astra_Customizer API

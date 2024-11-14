@@ -656,17 +656,7 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 	 * @since x.x.x
 	 */
 	if ( astra.is_scroll_to_id ) {
-		// Calculate the offset top of an element, accounting for nested elements.
-		const getOffsetTop = (element) => {
-			let offsetTop = 0;
-			while (element) {
-				offsetTop += element.offsetTop;
-				element = element.offsetParent;
-			}
-			return offsetTop;
-		}
-
-		const scrollToIDHandler = (e) => {
+		function scrollToIDHandler(e) {
 
 			let offset = 0;
 			const siteHeader = document.querySelector('.site-header');
@@ -682,7 +672,7 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 					});
 				}
 
-				const href = e.target.closest('a').hash;
+				const href = this.hash;
 				if (href) {
 					const scrollId = document.querySelector(href);
 					if (scrollId) {
@@ -693,6 +683,16 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 					}
 				}
 			}
+		}
+
+		// Calculate the offset top of an element, accounting for nested elements.
+		function getOffsetTop(element) {
+			let offsetTop = 0;
+			while (element) {
+				offsetTop += element.offsetTop;
+				element = element.offsetParent;
+			}
+			return offsetTop;
 		}
 
 		let hashLinks = [];

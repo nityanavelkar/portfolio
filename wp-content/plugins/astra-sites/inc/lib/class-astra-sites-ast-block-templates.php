@@ -20,22 +20,23 @@ if ( ! class_exists( 'Astra_Sites_Ast_Block_Templates' ) ) :
 		/**
 		 * Instance
 		 *
-		 * @since 4.0.4
-		 * @access private
-		 * @var object Class object.
+		 * @since 1.0.0
+		 * @var (Object) Astra_Sites_Ast_Block_Templates
 		 */
 		private static $instance = null;
 
 		/**
-		 * Initiator
+		 * Get Instance
 		 *
-		 * @since 4.0.4
-		 * @return mixed 
+		 * @since 1.0.0
+		 *
+		 * @return object Class object.
 		 */
 		public static function get_instance() {
-			if ( null === self::$instance ) {
+			if ( ! isset( self::$instance ) ) {
 				self::$instance = new self();
 			}
+
 			return self::$instance;
 		}
 
@@ -59,9 +60,9 @@ if ( ! class_exists( 'Astra_Sites_Ast_Block_Templates' ) ) :
 			$file = realpath( dirname( __FILE__ ) . '/gutenberg-templates/version.json' );
 
 			// Is file exist?
-			if ( is_string( $file ) && is_file( $file ) ) {
+			if ( is_file( $file ) ) {
 				// @codingStandardsIgnoreStart
-				$file_data = json_decode( (string)file_get_contents( $file ), true );
+				$file_data = json_decode( file_get_contents( $file ), true );
 				// @codingStandardsIgnoreEnd
 				global $ast_block_templates_version, $ast_block_templates_init;
 				$path = realpath( dirname( __FILE__ ) . '/gutenberg-templates/ast-block-templates.php' );
@@ -90,7 +91,7 @@ if ( ! class_exists( 'Astra_Sites_Ast_Block_Templates' ) ) :
 				return;
 			}
 			global $ast_block_templates_version, $ast_block_templates_init;
-			if ( is_file( (string) realpath( $ast_block_templates_init ) ) ) {
+			if ( is_file( realpath( $ast_block_templates_init ) ) ) {
 				include_once realpath( $ast_block_templates_init );
 			}
 		}

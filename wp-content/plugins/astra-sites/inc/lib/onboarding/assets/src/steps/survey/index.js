@@ -9,9 +9,7 @@ import { checkRequiredPlugins } from '../../steps/import-site/import-utils';
 import SurveyForm from './survey';
 import AdvancedSettings from './advanced-settings';
 import './style.scss';
-import { ArrowLeftIcon } from '@heroicons/react/24/outline';
-
-const { phpVersion, analytics, firstImportStatus } = starterTemplates;
+const { phpVersion, analytics } = starterTemplates;
 
 const Survey = () => {
 	const storedState = useStateValue();
@@ -25,7 +23,6 @@ const Survey = () => {
 			pluginInstallationAttempts,
 			fileSystemPermissions,
 			formDetails,
-			allowResetSite,
 		},
 		dispatch,
 	] = storedState;
@@ -190,79 +187,75 @@ const Survey = () => {
 		} );
 	};
 
-	const hasAgreedFirstTime = allowResetSite || firstImportStatus;
-
 	const handleSurveyFormSubmit = ( e ) => {
 		e.preventDefault();
 
-		if ( hasAgreedFirstTime ) {
-			setStartFlag();
+		setStartFlag();
 
-			setTimeout( () => {
-				dispatch( {
-					type: 'set',
-					currentIndex: currentIndex + 1,
+		setTimeout( () => {
+			dispatch( {
+				type: 'set',
+				currentIndex: currentIndex + 1,
+			} );
+		}, 500 );
+
+		if ( analytics !== 'yes' ) {
+			// Send data to analytics.
+			const answer = analyticsFlag ? 'yes' : 'no';
+			const optinAnswer = new FormData();
+			optinAnswer.append( 'action', 'astra-sites-update-analytics' );
+			optinAnswer.append( '_ajax_nonce', astraSitesVars._ajax_nonce );
+			optinAnswer.append( 'data', answer );
+
+			fetch( ajaxurl, {
+				method: 'post',
+				body: optinAnswer,
+			} )
+				.then( ( response ) => response.json() )
+				.then( ( response ) => {
+					if ( response.success ) {
+						starterTemplates.analytics = answer;
+					}
 				} );
-			}, 500 );
+		}
 
-			if ( analytics !== 'yes' ) {
-				// Send data to analytics.
-				const answer = analyticsFlag ? 'yes' : 'no';
-				const optinAnswer = new FormData();
-				optinAnswer.append( 'action', 'astra-sites-update-analytics' );
-				optinAnswer.append( '_ajax_nonce', astraSitesVars._ajax_nonce );
-				optinAnswer.append( 'data', answer );
+		if ( astraSitesVars.subscribed === 'yes' ) {
+			dispatch( {
+				type: 'set',
+				user_subscribed: true,
+			} );
+			return;
+		}
 
-				fetch( ajaxurl, {
-					method: 'post',
-					body: optinAnswer,
-				} )
-					.then( ( response ) => response.json() )
-					.then( ( response ) => {
-						if ( response.success ) {
-							starterTemplates.analytics = answer;
-						}
-					} );
-			}
+		if ( ! formDetails.opt_in && ! formDetails.email ) {
+			return;
+		}
 
-			if ( astraSitesVars.subscribed === 'yes' ) {
+		const subscriptionFields = {
+			EMAIL: formDetails.email,
+			FIRSTNAME: formDetails.first_name,
+			PAGE_BUILDER: builder,
+			WP_USER_TYPE: formDetails.wp_user_type,
+			BUILD_WEBSITE_FOR: formDetails.build_website_for,
+			OPT_IN: formDetails.opt_in,
+		};
+
+		const content = new FormData();
+		content.append( 'action', 'astra-sites-update-subscription' );
+		content.append( '_ajax_nonce', astraSitesVars._ajax_nonce );
+		content.append( 'data', JSON.stringify( subscriptionFields ) );
+
+		fetch( ajaxurl, {
+			method: 'post',
+			body: content,
+		} )
+			.then( ( response ) => response.json() )
+			.then( () => {
 				dispatch( {
 					type: 'set',
 					user_subscribed: true,
 				} );
-				return;
-			}
-
-			if ( ! formDetails.opt_in && ! formDetails.email ) {
-				return;
-			}
-
-			const subscriptionFields = {
-				EMAIL: formDetails.email,
-				FIRSTNAME: formDetails.first_name,
-				PAGE_BUILDER: builder,
-				WP_USER_TYPE: formDetails.wp_user_type,
-				BUILD_WEBSITE_FOR: formDetails.build_website_for,
-				OPT_IN: formDetails.opt_in,
-			};
-
-			const content = new FormData();
-			content.append( 'action', 'astra-sites-update-subscription' );
-			content.append( '_ajax_nonce', astraSitesVars._ajax_nonce );
-			content.append( 'data', JSON.stringify( subscriptionFields ) );
-
-			fetch( ajaxurl, {
-				method: 'post',
-				body: content,
-			} )
-				.then( ( response ) => response.json() )
-				.then( () => {
-					dispatch( {
-						type: 'set',
-						user_subscribed: true,
-					} );
-				} );
-		}
+			} );
 	};
 
 	const handlePluginFormSubmit = ( e ) => {
@@ -283,24 +276,13 @@ const Survey = () => {
 						updateFormDetails={ updateFormDetails }
 					/>
 				) }
-				<AdvancedSettings />
+				{ <AdvancedSettings /> }
 				<button
 					type="submit"
 					className="submit-survey-btn button-text d-flex-center-align"
-					style={
-						! hasAgreedFirstTime
-							? {
-									backgroundColor: '#E5E7EB',
-									cursor: 'not-allowed',
-									color: '#9CA3AF',
-							  }
-							: null
-					}
 				>
 					{ __( 'Submit & Build My Website', 'astra-sites' ) }
-					{ ! hasAgreedFirstTime
-						? ICONS.arrowRightDisabled
-						: ICONS.arrowRight }
+					{ ICONS.arrowRight }
 				</button>
 				<p
 					className="!text-zip-app-inactive-icon subscription-agreement-text text-center mt-4"
@@ -477,9 +459,7 @@ const Survey = () => {
 							: false
 					}
 				>
-					<span className="leading-[15px]">
-						{ __( 'Skip & Continue', 'astra-sites' ) }
-					</span>
+					{ __( 'Skip & Continue', 'astra-sites' ) }
 					{ ICONS.arrowRight }
 				</button>
 			</div>
@@ -602,10 +582,7 @@ const Survey = () => {
 						{ defaultStepContent }{ ' ' }
 					</div>
 					<PreviousStepLink>
-						<div className="flex text-center justify-center items-center gap-2">
-							<ArrowLeftIcon height={ 12.5 } strokeWidth={ 2 } />
-							{ __( 'Back', 'astra-sites' ) }
-						</div>
+						{ __( 'Back', 'astra-sites' ) }
 					</PreviousStepLink>
 				</>
 			}

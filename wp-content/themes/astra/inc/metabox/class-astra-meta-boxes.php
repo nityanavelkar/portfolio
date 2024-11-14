@@ -3,6 +3,8 @@
  * Post Meta Box
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.0.0
  */
@@ -523,14 +525,8 @@ if ( ! class_exists( 'Astra_Meta_Boxes' ) ) {
 						break;
 
 					case 'FILTER_DEFAULT':
-						/**
-						 * @psalm-suppress TooManyArguments
-						 * @psalm-suppress PossiblyInvalidArgument
-						 */
-						$meta_value = apply_filters( 'astra_php_default_filter_input', ! empty( $_POST[ $key ] ) ? sanitize_text_field( wp_unslash( $_POST[ $key ] ) ) : '', $key );
-						/** @psalm-suppress PossiblyInvalidArgument */
+							$meta_value = filter_input( INPUT_POST, $key, FILTER_DEFAULT ); // phpcs:ignore WordPressVIPMinimum.Security.PHPFilterFunctions.RestrictedFilter -- Default filter after all other cases, keeping this filter for backward compatibility of PRO options.
 						break;
-						
 				}
 
 				// Store values.

@@ -13,10 +13,9 @@ import { motion } from 'framer-motion';
 import { STORE_KEY } from '../store';
 import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import usePopper from '../hooks/use-popper';
-import { classNames, toastBody } from '../helpers';
+import { classNames } from '../helpers';
 import { useDebounce } from '../hooks/use-debounce';
 import LoadingSpinner from './loading-spinner';
-import toast from 'react-hot-toast';
 
 const container = {
 	closed: { opacity: 0 },
@@ -50,14 +49,7 @@ const BusinessTypes = () => {
 
 	const [ referenceRef, popperRef ] = usePopper( {
 		placement: 'bottom',
-		modifiers: [
-			{ name: 'offset', options: { offset: [ 0, 0 ] } },
-			{ name: 'flip', enabled: false },
-			{
-				name: 'preventOverflow',
-				options: { boundariesElement: 'viewport' },
-			},
-		],
+		modifiers: [ { name: 'offset', options: { offset: [ 0, 0 ] } } ],
 	} );
 
 	const [ openSuggestions, setOpenSuggestions ] = useState( false );
@@ -93,15 +85,11 @@ const BusinessTypes = () => {
 
 			if ( response.success ) {
 				setBusinessTypeListAIStep( response?.data?.data );
-			} else {
-				throw new Error( response?.data?.data );
 			}
+
 			setIsFetching( false );
 		} catch ( error ) {
-			if ( error.name === 'AbortError' ) {
-				return;
-			}
-			toast.error( toastBody( error ) );
+			// Do Nothing.
 		}
 	};
 
@@ -376,7 +364,7 @@ const BusinessTypes = () => {
 				) }
 				<div
 					ref={ scrollableRef }
-					className="max-h-[180px] w-full overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar]:h-1/2 [&::-webkit-scrollbar-thumb]:h-16 [&::-webkit-scrollbar-thumb]:rounded-md [&::-webkit-scrollbar-thumb]:bg-dark-app-background/20 [&::-webkit-scrollbar-thumb:hover]:bg-dark-app-background/30 [&::-webkit-scrollbar-track]:bg-white [&::-webkit-scrollbar-track]:rounded-md scroll-p-0"
+					className="max-h-[300px] w-full overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar]:h-1/2 [&::-webkit-scrollbar-thumb]:h-16 [&::-webkit-scrollbar-thumb]:rounded-md [&::-webkit-scrollbar-thumb]:bg-dark-app-background/20 [&::-webkit-scrollbar-thumb:hover]:bg-dark-app-background/30 [&::-webkit-scrollbar-track]:bg-white [&::-webkit-scrollbar-track]:rounded-md scroll-p-0"
 				>
 					<motion.ul
 						className="w-full flex flex-col gap-1"

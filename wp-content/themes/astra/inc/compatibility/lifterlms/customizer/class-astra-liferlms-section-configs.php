@@ -2,7 +2,9 @@
 /**
  * Register customizer panels & sections.
  *
- * @package     Astra\
+ * @package     Astra
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2020, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       Astra 1.2.0
  */

@@ -6,12 +6,11 @@ import { removeLocalStorageItem } from '../helpers';
 import { defaultOnboardingAIState } from '../store/reducer';
 import Modal from './modal';
 import Button from './button';
-import { useNavigateSteps } from '../router';
 
 const ContinueProgressModal = () => {
 	const { setContinueProgressModal, setWebsiteOnboardingAIDetails } =
 		useDispatch( STORE_KEY );
-	const { navigateTo } = useNavigateSteps();
+
 	const { continueProgressModal } = useSelect( ( select ) => {
 		const { getContinueProgressModalInfo } = select( STORE_KEY );
 		return {
@@ -23,10 +22,6 @@ const ContinueProgressModal = () => {
 		removeLocalStorageItem( 'ai-builder-onboarding-details' );
 		setWebsiteOnboardingAIDetails( defaultOnboardingAIState );
 		setContinueProgressModal( { open: false } );
-		navigateTo( {
-			to: '/',
-			replace: true,
-		} ); // Navigate to the first step
 	};
 
 	const handleContinue = () => {

@@ -3,6 +3,8 @@
  * Register customizer panels & sections for Easy Digital Downloads.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.5.5
  */

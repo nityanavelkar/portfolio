@@ -3,6 +3,8 @@
  * Breadcrumbs Loader for Astra theme.
  *
  * @package     Astra
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2020, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       Astra 1.7.0
  */
@@ -69,6 +71,12 @@ if ( ! class_exists( 'Astra_Breadcrumbs_Loader' ) ) {
 		public function theme_defaults( $defaults ) {
 
 			$astra_options = Astra_Theme_Options::get_astra_options();
+
+			/**
+			 * Breadcrumb Typography
+			 */
+			$defaults['breadcrumb-font-family'] = 'inherit';
+			$defaults['breadcrumb-font-weight'] = 'inherit';
 
 			/**
 			 * Breadcrumb Responsive Colors

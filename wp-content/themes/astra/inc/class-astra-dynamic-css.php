@@ -4,6 +4,8 @@
  *
  * @package     Astra
  * @subpackage  Class
+ * @author      Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.0.0
  */
@@ -213,9 +215,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 
 			// Elementor Loop block padding compatibility.
 			$elementor_container_padding_style_comp = self::elementor_container_padding_style_comp();
-
-			// Heading px to em conversion compatibility for responsive heading tags.
-			$heading_font_size_comp = self::heading_font_size_comp();
 
 			// Elementor button styling compatibility.
 			$add_body_class = self::elementor_btn_styling_comp();
@@ -474,8 +473,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			// Blog Post Title Typography Options.
 			$single_post_max                        = astra_get_option( 'blog-single-width' );
 			$single_post_max_width                  = astra_get_option( 'blog-single-max-width' );
-			$single_page_max                        = astra_get_option( 'page-single-width' );
-			$single_page_max_width                  = astra_get_option( 'page-single-max-width' );
 			$blog_width                             = astra_get_option( 'blog-width' );
 			$blog_max_width                         = astra_get_option( 'blog-max-width' );
 			$mobile_header_toggle_btn_style_color   = astra_get_option( 'mobile-header-toggle-btn-style-color', $btn_bg_color );
@@ -1507,28 +1504,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				);
 
 				$parse_css .= astra_parse_css( $single_post_outside_spacing_css_mobile, '', astra_get_mobile_breakpoint() );
-			} 
-			
-			
-			if ( self::astra_4_8_2_compatibility() ) {
-
-				$single_post_outside_padding_css_tablet = array(
-					'.ast-separate-container.ast-single-post #primary, .ast-narrow-container.ast-single-post #primary' => array(
-						'padding-left'  => astra_responsive_spacing( $single_post_outside_spacing, 'left', 'tablet' ),
-						'padding-right' => astra_responsive_spacing( $single_post_outside_spacing, 'right', 'tablet' ),
-					),
-				);
-
-				$parse_css .= astra_parse_css( $single_post_outside_padding_css_tablet, '', astra_get_tablet_breakpoint() );
-
-				$single_post_outside_padding_css_mobile = array(
-					'.ast-separate-container.ast-single-post #primary, .ast-narrow-container.ast-single-post #primary' => array(
-						'padding-left'  => astra_responsive_spacing( $single_post_outside_spacing, 'left', 'mobile' ),
-						'padding-right' => astra_responsive_spacing( $single_post_outside_spacing, 'right', 'mobile' ),
-					),
-				);
-
-				$parse_css .= astra_parse_css( $single_post_outside_padding_css_mobile, '', astra_get_mobile_breakpoint() );
 			}
 
 			/**
@@ -2265,40 +2240,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 
 			}
 
-			// Getting the responsive alignment option.
-			$shop_product_alignment = astra_get_option( 'shop-product-align-responsive' );
-
-			// Added Check if the tablet alignment is 'align-center'
-			if ( ( isset( $shop_product_alignment['desktop'] ) && 'align-center' === $shop_product_alignment['desktop'] ) && 'shop-page-list-style' !== astra_get_option( 'shop-style' ) ) {
-				$desktop_review_wrapper[' .ast-desktop .review-count'] = array(
-					'margin-left'  => '-40px',
-					'margin-right' => 'auto',
-				);
-
-				/* Parse CSS from array() -> Desktop CSS */
-				$parse_css .= astra_parse_css( $desktop_review_wrapper );
-			}
-
-			if ( class_exists( 'WooCommerce' ) && ! is_product() ) {
-				$review_rating_style['.review-rating'] = array(
-					'display'     => 'flex',
-					'align-items' => 'center',
-					'order'       => '2',
-				);
-
-				/* Parse CSS from array() -> Desktop CSS */
-				$parse_css .= astra_parse_css( $review_rating_style );
-			}
-
-			
-			// Added cover block paragraph tag text color compatibility.
-			if ( has_block( 'core/cover' ) ) {
-				$cover_block_style['body .wp-block-cover p'] = array(
-					'color' => esc_attr( $text_color ),
-				);
-				$parse_css                                  .= astra_parse_css( $cover_block_style );
-			}
-			
 			if ( true === $update_customizer_strctural_defaults ) {
 				$is_site_rtl               = is_rtl() ? true : false;
 				$ltr_left                  = $is_site_rtl ? esc_attr( 'right' ) : esc_attr( 'left' );
@@ -3682,7 +3623,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'h1, .entry-content h1, .entry-content h1 a',
 					'h1, .entry-content h1'
 				)                                => array(
-					'font-size' => astra_responsive_font( $heading_h1_font_size, 'tablet', $heading_font_size_comp ? '' : 30 ),
+					'font-size' => astra_responsive_font( $heading_h1_font_size, 'tablet', 30 ),
 				),
 
 				// Conditionally select the css selectors with or without achors.
@@ -3690,7 +3631,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'h2, .entry-content h2, .entry-content h2 a',
 					'h2, .entry-content h2'
 				)                                => array(
-					'font-size' => astra_responsive_font( $heading_h2_font_size, 'tablet', $heading_font_size_comp ? '' : 25 ),
+					'font-size' => astra_responsive_font( $heading_h2_font_size, 'tablet', 25 ),
 				),
 
 				// Conditionally select the css selectors with or without achors.
@@ -3698,7 +3639,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'h3, .entry-content h3, .entry-content h3 a',
 					'h3, .entry-content h3'
 				)                                => array(
-					'font-size' => astra_responsive_font( $heading_h3_font_size, 'tablet', $heading_font_size_comp ? '' : 20 ),
+					'font-size' => astra_responsive_font( $heading_h3_font_size, 'tablet', 20 ),
 				),
 
 				// Conditionally select the css selectors with or without achors.
@@ -3787,7 +3728,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'h1, .entry-content h1, .entry-content h1 a',
 					'h1, .entry-content h1'
 				)                                => array(
-					'font-size' => astra_responsive_font( $heading_h1_font_size, 'mobile', $heading_font_size_comp ? '' : 30 ),
+					'font-size' => astra_responsive_font( $heading_h1_font_size, 'mobile', 30 ),
 				),
 
 				// Conditionally select the css selectors with or without achors.
@@ -3795,7 +3736,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'h2, .entry-content h2, .entry-content h2 a',
 					'h2, .entry-content h2'
 				)                                => array(
-					'font-size' => astra_responsive_font( $heading_h2_font_size, 'mobile', $heading_font_size_comp ? '' : 25 ),
+					'font-size' => astra_responsive_font( $heading_h2_font_size, 'mobile', 25 ),
 				),
 
 				// Conditionally select the css selectors with or without achors.
@@ -3803,7 +3744,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'h3, .entry-content h3, .entry-content h3 a',
 					'h3, .entry-content h3'
 				)                                => array(
-					'font-size' => astra_responsive_font( $heading_h3_font_size, 'mobile', $heading_font_size_comp ? '' : 20 ),
+					'font-size' => astra_responsive_font( $heading_h3_font_size, 'mobile', 20 ),
 				),
 
 				// Conditionally select the css selectors with or without achors.
@@ -3962,18 +3903,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					),
 				);
 				$parse_css      .= astra_parse_css( $single_blog_css, astra_get_tablet_breakpoint( '', 1 ) );
-			endif;
-
-			/* Single Page */
-			if ( 'custom' === $single_page_max ) :
-
-				/* Site width Responsive */
-				$single_page_css = array(
-					' .page .site-content > .ast-container' => array(
-						'max-width' => astra_get_css_value( $single_page_max_width, 'px' ),
-					),                      
-				);
-				$parse_css      .= astra_parse_css( $single_page_css, astra_get_tablet_breakpoint( '', 1 ) );
 			endif;
 
 			if ( self::astra_headings_clear_compatibility() && is_singular() ) {
@@ -4780,17 +4709,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 		}
 
 		/**
-		 * PX to em conversion failed with default value set.
-		 *
-		 * @since 4.8.4
-		 * @return boolean
-		 */
-		public static function heading_font_size_comp() {
-			$astra_settings = get_option( ASTRA_THEME_SETTINGS, array() );
-			return apply_filters( 'heading_font_size_compatibility', isset( $astra_settings['astra-heading-font-size-compatibility'] ) ? false : true );
-		}
-
-		/**
 		 * Return post meta CSS
 		 *
 		 * @param  string $dynamic_css          Astra Dynamic CSS.
@@ -5111,6 +5029,8 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 		 * For eg Link color does not work for the links inside headings.
 		 *
 		 * If filter `astra_include_achors_in_headings_typography` is set to true or Astra Option `include-headings-in-typography` is set to true, This will return selectors with anchors. Else This will return selectors without anchors.
+		 *
+		 * @access Private.
 		 *
 		 * @since 1.4.9
 		 * @param String $selectors_with_achors CSS Selectors with anchors.
@@ -6353,17 +6273,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 		}
 
 		/**
-		 * Single post outside padding was not working.
-		 *
-		 * @return bool true|false.
-		 * @since 4.8.2
-		 */
-		public static function astra_4_8_2_compatibility() {
-			$astra_settings = get_option( ASTRA_THEME_SETTINGS );
-			return apply_filters( 'astra_get_option_v4-8-2-backward-option', isset( $astra_settings['v4-8-2-backward-option'] ) ? false : true );
-		}
-
-		/**
 		 * Restrict unitless support to body font by default.
 		 *
 		 * 1. Unitless line-height support.
@@ -6386,17 +6295,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 		public static function astra_4_8_0_compatibility() {
 			$astra_settings = get_option( ASTRA_THEME_SETTINGS );
 			return apply_filters( 'astra_get_option_enable-4-8-0-compatibility', isset( $astra_settings['enable-4-8-0-compatibility'] ) ? false : true );
-		}
-
-		/**
-		 * Added compatibility for alignwide Spectra container width.
-		 *
-		 * @return bool true|false.
-		 * @since 4.8.4
-		 */
-		public static function astra_4_8_4_compatibility() {
-			$astra_settings = get_option( ASTRA_THEME_SETTINGS );
-			return apply_filters( 'astra_get_option_enable-4-8-4-compatibility', isset( $astra_settings['enable-4-8-4-compatibility'] ) ? false : true );
 		}
 	}
 }

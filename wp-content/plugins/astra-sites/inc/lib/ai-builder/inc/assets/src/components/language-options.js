@@ -49,14 +49,7 @@ const LanguageOptions = ( {
 
 	const [ referenceRef, popperRef ] = usePopper( {
 		placement: placementValue,
-		modifiers: [
-			{ name: 'offset', options: { offset: [ 0, 0 ] } },
-			{ name: 'flip', enabled: false },
-			{
-				name: 'preventOverflow',
-				options: { boundariesElement: 'viewport' },
-			},
-		],
+		modifiers: [ { name: 'offset', options: { offset: [ 0, 0 ] } } ],
 	} );
 
 	const handleSelectOption = ( option ) => {

@@ -334,14 +334,8 @@ const LocalFont = () => {
 			if ( response.success ) {
 				fontUpdated('Variation Added Successfully!');
 			}
-			setAddingFont(false);
-		})
-		.catch((error) => {
-			console.error('Error during API request:', error);
-			fontUpdated('Failed to add variation. Please try again.');
-			setAddingFont(false);
-		});
-		
+			setAddingFont( false );
+		} );
 	};
 
 	return (

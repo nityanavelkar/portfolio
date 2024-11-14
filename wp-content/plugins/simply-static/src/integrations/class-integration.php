@@ -34,13 +34,6 @@ abstract class Integration {
 	protected $id = '';
 
 	/**
-	 * Active by default.
-	 *
-	 * @var bool
-	 */
-	protected $active_by_default = true;
-
-	/**
 	 * Load the integration.
 	 *
 	 * @return void
@@ -69,16 +62,12 @@ abstract class Integration {
 	 * @return boolean
 	 */
 	public function is_active() {
-		$options      = Options::instance();
-		$integrations = $options->get( 'integrations' );
+		$options = Options::instance();
+		$integrations = $options->get('integrations');
 
 		// Mainly for backwards compatibility. If there is no such option, it means it's all active.
-		if ( empty( $integrations ) && $this->active_by_default ) {
+		if ( empty( $integrations ) ) {
 			return true;
-		}
-
-		if ( ! is_array( $integrations ) ) {
-			$integrations = [];
 		}
 
 		return in_array( $this->id, $integrations, true );

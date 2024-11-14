@@ -51,10 +51,7 @@ const ListItem = ({ item }) => {
 					window.location.reload();
 				}, 500 );
 			}
-		} )
-		.catch((error) => {
-			console.error('Error during API request:', error);
-		});
+		} );
 	};
 
 	const getFontWeightTitle = ( weight, type, style ) => {

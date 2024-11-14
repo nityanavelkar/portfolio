@@ -120,7 +120,8 @@ const SiteList = () => {
 	const backStep = () => {
 		dispatch( {
 			type: 'set',
-			currentIndex: builder === 'fse' ? 0 : 1,
+			currentIndex: 0,
+			builder: 'ai-builder',
 		} );
 	};
 

@@ -3,8 +3,6 @@ import { useSelect, useDispatch } from '@wordpress/data';
 import apiFetch from '@wordpress/api-fetch';
 import { STORE_KEY } from '../store';
 import { getColorClass, formatNumber } from '../utils/helpers';
-import toast from 'react-hot-toast';
-import { toastBody } from '../helpers';
 
 const useCredits = () => {
 	const { setCreditsDetails } = useDispatch( STORE_KEY );
@@ -33,11 +31,9 @@ const useCredits = () => {
 				setCreditsDetails( response?.data?.data );
 			} else {
 				//  Handle error.
-				throw new Error( response?.data?.data );
 			}
 		} catch ( error ) {
 			// Handle error.
-			toast.error( toastBody( error ) );
 		}
 	};
 

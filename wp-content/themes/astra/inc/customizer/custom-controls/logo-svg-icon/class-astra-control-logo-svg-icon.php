@@ -3,6 +3,8 @@
  * Customizer Control: Logo SVG Icon
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2024, Astra
  * @link        https://wpastra.com/
  * @since       4.7.0
  */
@@ -20,6 +22,7 @@ class Astra_Control_Logo_SVG_Icon extends WP_Customize_Control {
 	/**
 	 * The control type.
 	 *
+	 * @access public
 	 * @var string
 	 */
 	public $type = 'ast-logo-svg-icon';

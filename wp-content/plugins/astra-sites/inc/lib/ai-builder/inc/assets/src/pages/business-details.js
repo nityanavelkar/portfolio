@@ -12,9 +12,6 @@ import { useForm } from 'react-hook-form';
 import Input from '../components/input';
 import { useNavigateSteps } from '../router';
 import Container from '../components/container';
-import AISitesNotice from '../components/ai-sites-notice';
-import { toastBody } from '../helpers';
-import toast from 'react-hot-toast';
 
 const BusinessDetails = () => {
 	const { nextStep } = useNavigateSteps();
@@ -49,10 +46,10 @@ const BusinessDetails = () => {
 			if ( response.success ) {
 				setSiteLanguageListAIStep( response?.data?.data );
 			} else {
-				throw new Error( response?.data?.data );
+				//  Handle error.
 			}
 		} catch ( error ) {
-			toast.error( toastBody( error ) );
+			// Handle error.
 		}
 	};
 
@@ -85,7 +82,6 @@ const BusinessDetails = () => {
 
 	return (
 		<Container>
-			<AISitesNotice />
 			<Heading
 				heading={ __( "Let's build your website!", 'ai-builder' ) }
 				subHeading={ __(

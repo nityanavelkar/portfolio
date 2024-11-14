@@ -60,15 +60,21 @@ class Upgrade_Handler {
 		self::$options = Options::instance();
 
 		// Check if directory exists, if not, create it.
-		Util::get_temp_dir();
+		$upload_dir = wp_upload_dir();
+		$temp_dir   = $upload_dir['basedir'] . DIRECTORY_SEPARATOR . 'simply-static' . DIRECTORY_SEPARATOR . 'temp-files';
+
+		// Check if directory exists.
+		if ( ! is_dir( $temp_dir ) ) {
+			wp_mkdir_p( $temp_dir );
+		}
 
 		self::$default_options = array(
 			'destination_scheme'            => 'https://',
 			'destination_host'              => '',
-			'temp_files_dir'                => '',
+			'temp_files_dir'                => trailingslashit( $temp_dir ),
 			'additional_urls'               => '',
 			'additional_files'              => '',
-			'urls_to_exclude'               => "",
+			'urls_to_exclude'               => "wp-json\nwp-login.php",
 			'delivery_method'               => 'zip',
 			'local_dir'                     => '',
 			'relative_path'                 => '',
@@ -170,7 +176,6 @@ class Upgrade_Handler {
 			'archive_name'                  => null,
 			'archive_start_time'            => null,
 			'archive_end_time'              => null,
-			'version'                       => SIMPLY_STATIC_VERSION,
 		);
 
 		$version = self::$options->get( 'version' );

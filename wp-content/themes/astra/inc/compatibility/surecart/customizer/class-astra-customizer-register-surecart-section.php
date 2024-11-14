@@ -3,6 +3,8 @@
  * Register customizer panels & sections for SureCart CPT.
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2024, Astra
  * @link        https://wpastra.com/
  * @since       Astra 4.6.13
  * @since       4.6.9 Changed to using Astra_Customizer API
@@ -28,7 +30,7 @@ if ( ! class_exists( 'Astra_Customizer_Register_Surecart_Section' ) ) {
 		 * @return Array Astra Customizer Configurations with updated configurations.
 		 */
 		public function register_configuration( $configurations, $wp_customize ) {
-
+		
 				$_configs = array(
 					array(
 						'name'     => 'ast-surecart',

@@ -3,6 +3,8 @@
  * Loader Functions
  *
  * @package     Astra
+ * @author      Astra
+ * @copyright   Copyright (c) 2020, Astra
  * @link        https://wpastra.com/
  * @since       Astra 1.0.0
  */
@@ -24,6 +26,7 @@ if ( ! class_exists( 'Astra_Enqueue_Scripts' ) ) {
 		/**
 		 * Class styles.
 		 *
+		 * @access public
 		 * @var $styles Enqueued styles.
 		 */
 		public static $styles;
@@ -31,6 +34,7 @@ if ( ! class_exists( 'Astra_Enqueue_Scripts' ) ) {
 		/**
 		 * Class scripts.
 		 *
+		 * @access public
 		 * @var $scripts Enqueued scripts.
 		 */
 		public static $scripts;

@@ -15,23 +15,20 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Astra_Sites_Reporting {
 
-	/**
-	 * Instance
-	 *
-	 * @since 4.0.0
-	 * @access private
-	 * @var object Class object.
-	 */
-    private static $instance = null;
+    /**
+     * Member Variable
+     *
+     * @var instance
+     */
+    private static $instance;
 
     /**
      * Initiator
      *
-     * @since 4.0.0
-	 * @return mixed 
+     * @since 3.1.4
      */
     public static function get_instance() {
-        if ( null === self::$instance ) {
+        if ( ! isset( self::$instance ) ) {
             self::$instance = new self();
         }
         return self::$instance;
@@ -100,10 +97,8 @@ class Astra_Sites_Reporting {
     /**
      * Report Error.
      * 
-     * @param array<string, mixed> $data Error data.
+     * @param array $data Error data.
      * @since 3.1.4
-     * 
-     * @return array<string, mixed>
      */
     public function report( $data ) {
         $id = isset( $data['id'] ) ? absint( $data['id'] ) : 0;

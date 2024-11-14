@@ -1,17 +1,9 @@
 import { Outlet } from '@tanstack/react-router';
 import { CheckIcon } from '@heroicons/react/24/outline';
-
-import {
-	useState,
-	memo,
-	useEffect,
-	useLayoutEffect,
-	Fragment,
-} from '@wordpress/element';
+import { memo, useEffect, useLayoutEffect, Fragment } from '@wordpress/element';
 import { useSelect, useDispatch } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 import { removeQueryArgs } from '@wordpress/url';
-
 import {
 	classNames,
 	getLocalStorageItem,
@@ -24,21 +16,12 @@ import ContinueProgressModal from '../continue-progress-modal';
 import AiBuilderExitButton from '../ai-builder-exit-button';
 import { AnimatePresence } from 'framer-motion';
 import { useNavigateSteps, steps, useValidateStep } from '../../router';
-import ToasterContainer from '../toast-container';
+import { Toaster } from 'react-hot-toast';
 import ErrorBoundary from '../../pages/error-boundary';
 import useEffectAfterMount from '../../hooks/use-effect-after-mount';
 import ApiErrorModel from '../api-error-model';
-import PlanInformationModal from '../plan-information-modal';
-import {
-	getPlanPromoDissmissTime,
-	getTimeDiff,
-	showAISitesNotice,
-} from '../../utils/helpers';
-import toast from 'react-hot-toast';
-import PlanUpgradePromo, { customToastOption } from '../plan-upgrade-promo';
-import { WEEKS_IN_SECONDS } from '../../utils/constants';
 
-const { logoUrlLight } = aiBuilderVars;
+const { logoUrl } = aiBuilderVars;
 
 const OnboardingAI = () => {
 	const {
@@ -52,12 +35,6 @@ const OnboardingAI = () => {
 		isAuthScreen = currentStep === 0;
 
 	const { setContinueProgressModal } = useDispatch( STORE_KEY );
-	const { continueProgressModal } = useSelect( ( select ) => {
-		const { getContinueProgressModalInfo } = select( STORE_KEY );
-		return {
-			continueProgressModal: getContinueProgressModalInfo(),
-		};
-	}, [] );
 
 	const aiOnboardingDetails = useSelect( ( select ) => {
 		const { getOnboardingAI } = select( STORE_KEY );
@@ -66,39 +43,21 @@ const OnboardingAI = () => {
 	const selectedTemplate = aiOnboardingDetails?.stepData?.selectedTemplate,
 		{ loadingNextStep } = aiOnboardingDetails;
 
-	const [ initialRedirectDone, setInitialRedirectDone ] = useState( false );
-
+	// Redirect to the required step.
 	useEffect( () => {
-		if ( initialRedirectDone ) {
-			return;
-		}
-
-		const savedData = getLocalStorageItem(
-			'ai-builder-onboarding-details'
-		);
-		if ( savedData?.lastVisitedStep && aiBuilderVars?.zip_token_exists ) {
-			navigateTo( {
-				to: savedData.lastVisitedStep,
-				replace: true,
-			} );
-			setContinueProgressModal( { open: true } );
-		} else if ( ! aiBuilderVars?.zip_token_exists ) {
+		if ( ! aiBuilderVars.zip_token_exists ) {
 			navigateTo( {
 				to: '/',
 				replace: true,
 			} );
-		} else {
-			navigateTo( {
-				to: redirectToStepURL,
-				replace: true,
-			} );
+			return;
 		}
-		setInitialRedirectDone( true );
-	}, [
-		initialRedirectDone,
-		aiBuilderVars?.zip_token_exists,
-		redirectToStepURL,
-	] );
+		navigateTo( {
+			to: redirectToStepURL,
+			replace: true,
+		} );
+	}, [ currentStep, aiOnboardingDetails ] );
+
 	useEffectAfterMount( () => {
 		if (
 			! aiOnboardingDetails?.stepData?.businessType ||
@@ -106,13 +65,11 @@ const OnboardingAI = () => {
 		) {
 			return;
 		}
-		if ( ! continueProgressModal?.open ) {
-			setLocalStorageItem( 'ai-builder-onboarding-details', {
-				...aiOnboardingDetails,
-				lastVisitedStep: currentStepURL,
-			} );
-		}
-	}, [ aiOnboardingDetails, currentStepURL ] );
+		setLocalStorageItem(
+			'ai-builder-onboarding-details',
+			aiOnboardingDetails
+		);
+	}, [ aiOnboardingDetails ] );
 
 	useEffect( () => {
 		const savedAiOnboardingDetails = getLocalStorageItem(
@@ -184,50 +141,6 @@ const OnboardingAI = () => {
 		} );
 	};
 
-	const { setPlanInformationModal } = useDispatch( STORE_KEY );
-
-	const { planInformationModal } = useSelect( ( select ) => {
-		const { getPlanInfoModalInfo } = select( STORE_KEY );
-		return {
-			planInformationModalInfo: getPlanInfoModalInfo(),
-		};
-	} );
-
-	const {
-		zip_plans: { active_plan },
-		show_zip_plan,
-	} = aiBuilderVars;
-
-	useEffect( async () => {
-		// handle not logged in case.
-		if (
-			typeof aiBuilderVars?.zip_plans !== 'object' ||
-			show_zip_plan !== '1'
-		) {
-			return;
-		}
-
-		const promoDismissTimeinMS = ( await getPlanPromoDissmissTime() )
-			.dismiss_time;
-
-		// if 2 weeks have not been passed
-		if ( getTimeDiff( promoDismissTimeinMS ) < 2 * WEEKS_IN_SECONDS ) {
-			return;
-		}
-
-		if ( showAISitesNotice() && active_plan?.slug !== 'business' ) {
-			toast.loading(
-				( { id: toastId } ) => (
-					<PlanUpgradePromo
-						toastId={ toastId }
-						zipPlans={ aiBuilderVars?.zip_plans }
-					/>
-				),
-				customToastOption
-			);
-		}
-	}, [] );
-
 	return (
 		<>
 			<div
@@ -240,21 +153,20 @@ const OnboardingAI = () => {
 				{ ! isAuthScreen && (
 					<header
 						className={ classNames(
-							'w-full h-full grid grid-cols-[8rem_1fr_8rem] items-center justify-between md:justify-start z-[5] relative bg-white shadow',
+							'w-full h-full grid grid-cols-[5rem_1fr_5rem] items-center justify-between md:justify-start z-[5] relative bg-white shadow',
 							steps[ currentStep ]?.layoutConfig?.hideHeader &&
 								'justify-center md:justify-between'
 						) }
 					>
 						{ /* Brand logo */ }
 						<img
-							className="h-10 ml-3"
-							src={ logoUrlLight }
+							className="h-10 mx-auto"
+							src={ logoUrl }
 							alt={ __( 'Build with AI', 'ai-builder' ) }
 						/>
-
 						{ /* Steps/Navigation items */ }
 						{ ! steps[ currentStep ]?.layoutConfig?.hideHeader && (
-							<nav className="hidden md:flex items-center justify-center gap-4 flex-1 md:gap-2 lg:gap-4">
+							<nav className="hidden md:flex items-center justify-center gap-4 flex-1">
 								{ steps.map(
 									(
 										{
@@ -318,7 +230,7 @@ const OnboardingAI = () => {
 														</div>
 														<div
 															className={ classNames(
-																'text-sm font-medium text-secondary-text md:text-xs lg:text-sm',
+																'text-sm font-medium text-secondary-text',
 																currentStep ===
 																	stepIdx &&
 																	'text-accent-st'
@@ -339,7 +251,7 @@ const OnboardingAI = () => {
 													) && (
 														<div
 															className={ classNames(
-																'w-8 h-px self-center md:w-4 lg:w-8',
+																'w-8 h-px self-center',
 																dynamicClass(
 																	currentStep,
 																	stepIdx
@@ -354,27 +266,10 @@ const OnboardingAI = () => {
 						) }
 						{ /* Close button */ }
 						{ /* Do not show on Migration step */ }
-
 						{ getStepIndex( '/done' ) !== currentStep &&
 							getStepIndex( '/building-website' ) !==
 								currentStep && (
-								<div className="[grid-area:1/3] !mr-5 flex items-center justify-center mx-auto">
-									{ show_zip_plan && (
-										<>
-											<button
-												onClick={ () =>
-													setPlanInformationModal( {
-														planInformationModal,
-														open: true,
-													} )
-												}
-												className="border px-1.5 py-0.5 font-semibold border-blue-crayola text-xs rounded text-blue-crayola"
-											>
-												{ active_plan?.name }
-											</button>
-											<span className="mx-3 h-4 w-[1px] bg-border-tertiary"></span>
-										</>
-									) }
+								<div className="[grid-area:1/3] flex items-center justify-center mx-auto">
 									<AiBuilderExitButton exitButtonClassName="text-icon-tertiary hover:text-icon-secondary" />
 								</div>
 							) }
@@ -404,7 +299,6 @@ const OnboardingAI = () => {
 				<LimitExceedModal />
 				<ContinueProgressModal />
 				<ApiErrorModel />
-				<PlanInformationModal />
 			</div>
 			<div className="absolute top-0 left-0 z-20">
 				<AnimatePresence>
@@ -414,7 +308,7 @@ const OnboardingAI = () => {
 				</AnimatePresence>
 			</div>
 			{ /* Toaster container */ }
-			<ToasterContainer />
+			<Toaster position="top-right" reverseOrder={ false } gutter={ 8 } />
 		</>
 	);
 };

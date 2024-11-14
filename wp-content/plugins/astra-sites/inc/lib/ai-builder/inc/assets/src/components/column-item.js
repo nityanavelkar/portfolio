@@ -22,7 +22,6 @@ export const ColumnItem = ( { template, position } ) => {
 		setWebsiteTypography,
 		setWebsiteLogo,
 		setSelectedTemplateIsPremium,
-		setSiteTitleVisible,
 	} = useDispatch( STORE_KEY );
 	const containerRef = useRef( null );
 	const loadingSkeleton = useRef( null );
@@ -174,7 +173,6 @@ export const ColumnItem = ( { template, position } ) => {
 							setWebsiteLogo( siteLogoDefault );
 							setWebsiteTypography( null );
 							setWebsiteColorPalette( null );
-							setSiteTitleVisible( true );
 						} }
 						onMouseEnter={ () => {
 							hoverScrollTimeout.current = setTimeout( () => {

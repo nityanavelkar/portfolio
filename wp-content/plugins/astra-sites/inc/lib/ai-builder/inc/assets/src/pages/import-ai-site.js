@@ -23,7 +23,7 @@ const successMessageDelay = 8000; // 8 seconds delay for fully assets load.
 import { STORE_KEY } from '../store';
 import ErrorModel from '../components/error-model';
 import { TOTAL_STEPS, useNavigateSteps } from '../router';
-import { SITE_CREATION_STATUS_CODES, getLocalStorageItem } from '../helpers';
+import { SITE_CREATION_STATUS_CODES } from '../helpers';
 
 const RANDOM_FINAL_FINISHING_MESSAGES = [
 	__( 'Double-checking for grammar and spelling errors…', 'ai-builder' ),
@@ -61,31 +61,22 @@ const ImportAiSite = () => {
 			siteLanguage,
 		},
 		aiSiteLogo,
-		aiSiteTitleVisible,
 		aiActiveTypography,
 		aiActivePallette,
-		siteFeatures,
-		siteFeaturesData,
 	} = useSelect( ( select ) => {
 		const {
 			getWebsiteInfo,
 			getAIStepData,
 			getSiteLogo,
-			getSiteTitleVisible,
 			getActiveTypography,
 			getActiveColorPalette,
-			getSiteFeatures,
-			getSiteFeaturesData,
 		} = select( STORE_KEY );
 		return {
 			websiteInfo: getWebsiteInfo(),
 			aiStepData: getAIStepData(),
 			aiSiteLogo: getSiteLogo(),
-			aiSiteTitleVisible: getSiteTitleVisible(),
 			aiActiveTypography: getActiveTypography(),
 			aiActivePallette: getActiveColorPalette(),
-			siteFeatures: getSiteFeatures(),
-			siteFeaturesData: getSiteFeaturesData(),
 		};
 	}, [] );
 
@@ -184,12 +175,6 @@ const ImportAiSite = () => {
 		reportErr.append( 'action', 'astra-sites-report_error' );
 		reportErr.append( '_ajax_nonce', aiBuilderVars._ajax_nonce );
 		reportErr.append(
-			'local_storage',
-			JSON.stringify(
-				getLocalStorageItem( 'ai-builder-onboarding-details' )
-			)
-		);
-		reportErr.append(
 			'error',
 			JSON.stringify( {
 				primaryText: primary,
@@ -216,7 +201,7 @@ const ImportAiSite = () => {
 		);
 		await setSiteLogo( aiSiteLogo );
 		await setColorPalettes( JSON.stringify( aiActivePallette ) );
-		await setSiteTitle( businessName, aiSiteTitleVisible );
+		await setSiteTitle( businessName );
 		await saveTypography( aiActiveTypography );
 		await setSiteLanguage( languageItem?.[ 'wordpress-code' ] ?? 'en_US' );
 	};
@@ -1194,27 +1179,14 @@ const ImportAiSite = () => {
 		const sourceCurrency =
 			templateResponse?.[ 'astra-site-surecart-settings' ]?.currency ||
 			'usd';
-
+		if ( '' === sourceID || 'null' === sourceID ) {
+			return true;
+		}
 		const surecart = new FormData();
 		surecart.append( 'action', 'astra-sites-import_surecart_settings' );
-		surecart.append( '_ajax_nonce', aiBuilderVars._ajax_nonce );
-
-		if ( '' === sourceID || 'null' === sourceID ) {
-			const enabledFeatures = siteFeatures
-				.filter( ( feature ) => feature?.enabled )
-				.map( ( feature ) => feature?.id );
-			if (
-				enabledFeatures?.includes( 'ecommerce' ) &&
-				siteFeaturesData?.ecommerce_type === 'surecart'
-			) {
-				surecart.append( 'create_account', true );
-			} else {
-				return true;
-			}
-		}
-
 		surecart.append( 'source_id', sourceID );
 		surecart.append( 'source_currency', sourceCurrency );
+		surecart.append( '_ajax_nonce', aiBuilderVars._ajax_nonce );
 
 		const status = await fetch( ajaxurl, {
 			method: 'post',

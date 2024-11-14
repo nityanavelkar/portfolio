@@ -8,8 +8,6 @@ import Heading from './heading';
 import NavigationButtons from './navigation-buttons';
 import LanguageSelection from '../components/language-selection';
 import BusinessTypes from '../components/business-types';
-import toast from 'react-hot-toast';
-import { toastBody } from '../helpers';
 
 const Type = ( { onClickContinue } ) => {
 	const { setSiteLanguageListAIStep } = useDispatch( STORE_KEY );
@@ -39,10 +37,9 @@ const Type = ( { onClickContinue } ) => {
 				setSiteLanguageListAIStep( response?.data?.data );
 			} else {
 				//  Handle error.
-				throw new Error( response?.data?.data );
 			}
 		} catch ( error ) {
-			toast.error( toastBody( error ) );
+			// Handle error.
 		}
 	};
 

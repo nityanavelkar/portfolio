@@ -3,6 +3,8 @@
  * Scroll To Top Options for our theme.
  *
  * @package     Astra
+ * @author      Brainstorm Force
+ * @copyright   Copyright (c) 2022, Brainstorm Force
  * @link        https://www.brainstormforce.com
  * @since       4.0.0
  */
